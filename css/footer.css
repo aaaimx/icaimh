@@ -1,3 +1,18 @@
 .image-icon {
     max-width: 50px !important;
 }
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 2.5em;
+    display: none;
+    z-index: 10000 !important;
+}
+
+@media (max-width: 768px) {
+    #information-footer {
+        text-align: center !important;
+        margin-bottom: 1em;
+    }
+}
