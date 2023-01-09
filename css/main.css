@@ -11,8 +11,8 @@
 
 .init-image {
     background-image: url("../img/background.jpg");
-    height: calc(100% - 90px);
-    margin-top: 90px;
+    height: calc(100% - 70px);
+    margin-top: 70px;
 }
 
 .section-will {
