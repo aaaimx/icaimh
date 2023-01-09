@@ -15,18 +15,24 @@
     <link rel="stylesheet" href="css/tool.css">
     <link rel="stylesheet" href="css/bootstrap/bootstrap.css"/>
     <link rel="stylesheet" href="css/partners.css"/>
+    <!-- Agregado William Gongora -->
+    <link rel="stylesheet" href="css/tinycarousel.css">
+    <!--Fin Agregado William Gongora -->
     <script src="js/jquery/jquery-3.6.3.min.js"></script>
     <script src="js/boostrap/popper.js"></script>
     <script src="js/boostrap/bootstrap.js"></script>
     <script src="https://kit.fontawesome.com/45786511e1.js" crossorigin="anonymous"></script>
+    <!-- Agregado William Gongora -->
+    <script type="text/javascript" src="js/jquery.tinycarousel.min.js"></script>
+    <!-- Fin Agregado William Gongora -->
 </head>
 <body class="d-flex h-100 text-center">
 <div class="d-flex w-100 h-100 mx-auto flex-column">
     <header class="fixed-top bg-white shadow-sm">
         <nav class="navbar navbar-expand-lg bg-white py-2 px-4">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="img/logo.png" alt="Bootstrap" width="220">
+                <a class="navbar-brand" href="#home">
+                    <img src="img/logo.png" alt="Bootstrap" width="200">
                 </a>
                 <button class="navbar-toggler button-toggle-custom" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -36,10 +42,10 @@
                 <div class="justify-content-end collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active no-active" aria-current="page" href="#">HOME</a>
+                            <a class="nav-link active no-active" aria-current="page" href="#home">HOME</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link no-active" href="#">SPEAK</a>
+                            <a class="nav-link no-active" href="#speaker">SPEAKERS</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link no-active" href="#">PROGRAM</a>
@@ -61,16 +67,16 @@
             </div>
         </nav>
     </header>
-    <section class="position-relative init-image">
-        <div class="position-absolute top-50 start-50 translate-middle">
-            <img src="img/logo.png" class="img-fluid img-thumbnail border-0"
-                 style="background-color: transparent;" alt="ICAIMH">
-        </div>
-        <img src="img/background.png" class="img-fluid" alt="...">
-    </section>
-
-    <main class="py-3">
-        <div class="container p-5">
+    <!--Fin Agregado William-->
+    <main class="pb-3">
+        <section class="position-relative init-image">
+            <div class="position-absolute top-50 start-50 translate-middle">
+                <img src="img/logo.png" class="img-fluid img-thumbnail border-0"
+                     style="background-color: transparent;" alt="ICAIMH">
+            </div>
+            <img src="img/background.png" class="img-fluid" alt="...">
+        </section>
+        <div id="home" class="container p-5">
             <h2>WELCOME TO ICAIMH 2022, THE INTERNATIONAL CONFERENCE ON ARTIFICIAL INTELLIGENCE FOR MENTAL HEALTH.
                 <br>
                 <br>
@@ -81,6 +87,174 @@
             <p class="text-center my-4">Welcome to ICAIMH 2023, International Conference on Artificial Intelligence
                 for Mental Health, the premier international gathering of researchers in AI!</p>
         </div>
+        <!--Agregado William-->
+        <section id="speaker" class="Speaker ancho p-5">
+            <br>
+            <h3 class="py-2">SPEAKERS</h3>
+            <section id="slider1">
+                <i id="buttons" class="fas fa-chevron-circle-left buttons prev"></i>
+
+                <div class="viewport p-4">
+                    <ul class="overview">
+                        <li><img src="img/Empleado3.jpg" />
+                            <h2>Gerardo Arturo Peréz Peréz</h2>
+                            <p>ING. Sistemas Computacionales</p>
+                            <div class="redes">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-instagram-square"></i></a>
+                            </div>
+                        </li>
+                        <li><img src="img/Empleado3.jpg" />
+                            <h2>Mauricio Gabriel Orozco del Castillo</h2>
+                            <p>ING. Sistemas Computacionales</p>
+                            <div class="redes">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-instagram-square"></i></a>
+                            </div>
+                        </li>
+                        <li><img src="img/Empleado3.jpg" />
+                            <h2>Manuel Antonio Cetina Aguilar</h2>
+                            <p>ING. Sistemas Computacionales</p>
+                            <div class="redes">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-instagram-square"></i></a>
+                            </div>
+                        </li>
+                        <li><img src="img/Empleado3.jpg" />
+                            <h2>Jannet del Rocio Baeza Arévalo</h2>
+                            <p>ING. Sistemas Computacionales</p>
+                            <div class="redes">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-instagram-square"></i></a>
+                            </div>
+                        </li>
+                        <li><img src="img/Empleado3.jpg" />
+                            <h2>Angel de Jesus Matos Pech</h2>
+                            <p>ING. Sistemas Computacionales</p>
+                            <div class="redes">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-instagram-square"></i></a>
+                            </div>
+                        </li>
+                        <li><img src="img/Empleado3.jpg" />
+                            <h2>Luis Fernando Rodriguez Dominguez</h2>
+                            <p>ING. Sistemas Computacionales</p>
+                            <div class="redes">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-instagram-square"></i></a>
+                            </div>
+                        </li>
+                        <li><img src="img/Empleado3.jpg" />
+                            <h2>Alfredo Zanches Martinez</h2>
+                            <p>ING. Sistemas Computacionales</p>
+                            <div class="redes">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-instagram-square"></i></a>
+                            </div>
+                        </li>
+                        <li><img src="img/Empleado3.jpg" />
+                            <h2>Cristiam Elohim Sosa Espadas</h2>
+                            <p>ING. Sistemas Computacionales</p>
+                            <div class="redes">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-instagram-square"></i></a>
+                            </div>
+                        </li>
+                        <li><img src="img/Empleado3.jpg" />
+                            <h2>Alejandro Sánchez Sánchez</h2>
+                            <p>ING. Sistemas Computacionales</p>
+                            <div class="redes">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-instagram-square"></i></a>
+                            </div>
+                        </li>
+                        <li><img src="img/Empleado3.jpg" />
+                            <h2>Esteban Pacheco Novelo</h2>
+                            <p>ING. Sistemas Computacionales</p>
+                            <div class="redes">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-instagram-square"></i></a>
+                            </div>
+                        </li>
+                        <li><img src="img/Empleado3.jpg" />
+                            <h2>Cesas Gerardo Sulub Luit</h2>
+                            <p>ING. Sistemas Computacionales</p>
+                            <div class="redes">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-instagram-square"></i></a>
+                            </div>
+                        </li>
+                        <li><img src="img/Empleado3.jpg" />
+                            <h2>Alejandro Jesus Rivero Bass</h2>
+                            <p>ING. Sistemas Computacionales</p>
+                            <div class="redes">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-instagram-square"></i></a>
+                            </div>
+                        </li>
+                        <li><img src="img/Empleado3.jpg" />
+                            <h2>Victor Hugo Martánez Gonzáles</h2>
+                            <p>ING. Sistemas Computacionales</p>
+                            <div class="redes">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-instagram-square"></i></a>
+                            </div>
+                        </li>
+                        <li><img src="img/Empleado3.jpg" />
+                            <h2>Hector Ruiz Juarez</h2>
+                            <p>ING. Sistemas Computacionales</p>
+                            <div class="redes">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-instagram-square"></i></a>
+                            </div>
+                        </li>
+                        <li><img src="img/Empleado3.jpg" />
+                            <h2>Ana Maria Martin Casado</h2>
+                            <p>ING. Sistemas Computacionales</p>
+                            <div class="redes">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-instagram-square"></i></a>
+                            </div>
+                        </li>
+                        <li><img src="img/Empleado3.jpg" />
+                            <h2>Juan Antonio Recio Garcia</h2>
+                            <p>ING. Sistemas Computacionales</p>
+                            <div class="redes">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-instagram-square"></i></a>
+                            </div>
+                        </li>
+                        <li><img src="img/Empleado3.jpg" />
+                            <h2>Nora Leticia Cuevas Cuevas</h2>
+                            <p>ING. Sistemas Computacionales</p>
+                            <div class="redes">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-instagram-square"></i></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <i  id="buttons" class="fas fa-chevron-circle-right buttons next"></i>
+            </section>
+        </section>
+        <!--Fin William-->
         <section class="section-will py-5">
             <div class="container d-flex p-4 flex-column align-items-center justify-content-center">
                 <h3 class="py-2">This is what will be addressed at ICAIMH 2023</h3>
@@ -480,6 +654,14 @@
 
     <script src="js/boostrap/carousel.js"></script>
     <script src="js/body.js"></script>
+    <!-- Agregado William Gongora -->
+    <script type="text/javascript">
+		$(document).ready(function()
+		{
+			$('#slider1').tinycarousel();
+		});
+	</script>
+    <!-- Fin Agregado William Gongora -->
 </div>
 </body>
 </html>
