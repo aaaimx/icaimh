@@ -1,9 +1,0 @@
-html {
-    scroll-padding-top: 70px;
-}
-
-.menu-hover:hover {
-    color: #FFFFFF !important;
-    transition: ease all 0.2s !important;
-    background-color: #198754;
-}

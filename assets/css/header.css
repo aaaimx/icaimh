@@ -1,0 +1,22 @@
+.no-active {
+    border-bottom: 3px solid transparent;
+}
+
+.menu-hover {
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.button-toggle-custom {
+    border: none !important;
+}
+
+.button-toggle-custom:focus {
+    box-shadow: none !important;
+}
+
+@media (max-width: 991px) {
+    .center-dropdown {
+        text-align: center !important;
+    }
+}
