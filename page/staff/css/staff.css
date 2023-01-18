@@ -8,6 +8,16 @@
     font-size: 14px !important;
 }
 
+.min-size {
+    min-width: 300px !important;
+    transition: all ease-in-out 0.5s;
+}
+
+.min-size:hover {
+    transform: scale(1.05);
+    transition: all ease-in-out 0.5s;
+}
+
 .link-custom i {
     padding: 0px 3px;
     font-size: 20px;
@@ -23,7 +33,7 @@
     font-family: "Montserrat", sans-serif;
     color: #8d97ad;
     font-weight: 300;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 .testimonial3 h1,
@@ -71,8 +81,8 @@
 }
 
 .testimonial3 .card.card-shadow {
-    -webkit-box-shadow: 0px 0px 15px rgba(115, 128, 157, 0.1);
-    box-shadow: 0px 0px 15px rgba(115, 128, 157, 0.1);
+    -webkit-box-shadow: 0px 0px 15px rgba(115, 128, 157, 0.3);
+    box-shadow: 0px 0px 15px rgba(115, 128, 157, 0.3);
 }
 
 .testimonial3 .font-10 {
