@@ -58,6 +58,8 @@
 
 .testimonial3 .testi3 .thumb-img img {
     width: 160px;
+    height: 160px;
+    object-fit: cover;
 }
 
 .testimonial3 .testi3 .customer {
