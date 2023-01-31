@@ -1,3 +1,20 @@
+.aling-style-custom {
+    text-align: justify !important;
+}
+
+.aling-style, .aling-style-custom {
+    text-align: center;
+    align-self: center;
+}
+
+.color-program-morning {
+    color: #198754;
+}
+
+.color-program-afternoon {
+    color: #800000;
+}
+
 .custom-nav-style, .custom-nav-style li {
     background-color: transparent;
     display: flex !important;
@@ -26,7 +43,12 @@
     transition: background-color ease-in-out 0.3s;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+    .aling-style, .aling-style-custom {
+        text-align: center !important;
+        margin: 10px auto;
+    }
+
     .custom-nav-style {
         display: inline-flex !important;
         flex-direction: column;
