@@ -18,6 +18,7 @@ html {
     right: 2.5em;
     display: none;
     z-index: 10000 !important;
+    transition: ease all 0.2s !important;
 }
 
 .in-progress {

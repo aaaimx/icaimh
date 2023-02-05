@@ -1,7 +1,7 @@
 .info-text {
     max-width: 80% !important;
     margin: auto !important;
-    min-height: 170px !important;
+    min-height: 100px !important;
 }
 
 .info-text p {
@@ -63,11 +63,12 @@
 
 .testimonial3 .testi3 .thumb-img img {
     width: 160px;
+    height: 160px;
+    object-fit: cover;
 }
 
 .testimonial3 .testi3 .customer {
-    text-transform: uppercase;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
 }
 

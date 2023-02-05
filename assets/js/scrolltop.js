@@ -5,8 +5,12 @@ function scrollFunction() {
         document.documentElement.scrollTop > 20
     ) {
         buttonTop.style.display = "block"
+        buttonTop.style.visibility = "visible"
+        buttonTop.style.opacity = 1
     } else {
-        buttonTop.style.display = "none"
+        buttonTop.style.display = "block"
+        buttonTop.style.visibility = "hidden"
+        buttonTop.style.opacity = 0
     }
 }
 
