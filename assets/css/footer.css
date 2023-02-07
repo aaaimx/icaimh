@@ -10,6 +10,15 @@
     text-align: end !important;
 }
 
+.custom-hidden {
+    display: block;
+}
+
+.custom-flex {
+    flex-direction: row;
+    padding-top: 0px;
+}
+
 #extend-nav {
     flex-direction: row !important;
 }
@@ -22,6 +31,23 @@
 
     .center-footer {
         text-align: center !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .custom-hidden {
+        display: none;
+    }
+
+    .custom-flex {
+        flex-direction: column;
+        padding-top: 5px;
+    }
+}
+
+@media (max-width: 466px) {
+    .custom-flex {
+        padding-top: 5px;
     }
 }
 
