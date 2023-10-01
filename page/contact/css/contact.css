@@ -23,11 +23,7 @@ body{
 h3{
     font-weight: 600;
     border-bottom: 1px solid #003E7D;
-    display: inline;
-}
-
-.gap-content{
-    gap: 2.5rem;
+    display: inline-block;
 }
 
 .size-icon-info{
