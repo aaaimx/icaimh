@@ -1,0 +1,97 @@
+.info-text {
+    max-width: 80% !important;
+    margin: auto !important;
+    min-height: 120px !important;
+}
+
+.info-text p {
+    font-size: 14px !important;
+}
+
+.min-size {
+    transition: all ease-in-out 0.5s;
+}
+
+.min-size:hover {
+    transform: scale(1.05);
+    transition: all ease-in-out 0.5s;
+}
+
+.link-custom i {
+    padding: 0px 3px;
+    font-size: 20px;
+    color: #1B8C3C;
+}
+
+.link-custom i:hover {
+    color: #20af4b;
+    transition: all ease-in-out 0.5s;
+}
+
+.testimonial3 {
+    font-family: "Montserrat", sans-serif;
+    color: #8d97ad;
+    font-weight: 300;
+    border-radius: 8px;
+}
+
+.testimonial3 h1,
+.testimonial3 h2,
+.testimonial3 h3,
+.testimonial3 h4,
+.testimonial3 h5,
+.testimonial3 h6 {
+    color: #3e4555;
+}
+
+.testimonial3 .font-weight-medium {
+    font-weight: 500;
+}
+
+.testimonial3 .bg-light {
+    background-color: #f4f8fa !important;
+}
+
+.testimonial3 .subtitle {
+    color: #8d97ad;
+    line-height: 24px;
+}
+
+.testimonial3 .testi3 h6 {
+    line-height: 26px;
+}
+
+.testimonial3 .testi3 .thumb-img img {
+    width: 160px;
+}
+
+.testimonial3 .testi3 .customer {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.testimonial3 .testi3 .line-height {
+    line-height: 24px;
+}
+
+.testimonial3 .card.card-shadow {
+    -webkit-box-shadow: 0px 0px 15px rgba(115, 128, 157, 0.3);
+    box-shadow: 0px 0px 15px rgba(115, 128, 157, 0.3);
+}
+
+.testimonial3 .font-10 {
+    font-size: 10px;
+}
+
+.testimonial3 .text-success {
+    color: #2cdd9b !important;
+}
+
+.testimonial3 .text-muted {
+    color: #8d97ad !important;
+}
+
+.testimonial3 .owl-theme .owl-dots .owl-dot.active span,
+.testimonial3 .owl-theme .owl-dots .owl-dot:hover span {
+    background: #316ce8;
+}

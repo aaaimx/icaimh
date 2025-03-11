@@ -1,0 +1,19 @@
+.max-image {
+    width: auto !important;
+    max-height: 200px !important;
+    margin: auto auto;
+}
+
+.inactive {
+    padding: 15px;
+    transition: all ease-in-out 0.5s;
+}
+
+.inactive:hover {
+    transform: scale(1.05);
+}
+
+.inactive a {
+    background-color: #198754;
+    border: none;
+}

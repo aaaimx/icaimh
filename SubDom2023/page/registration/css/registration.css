@@ -1,0 +1,28 @@
+.custom-nav-style, .custom-nav-style li {
+    background-color: transparent;
+    display: flex !important;
+    flex-direction: row;
+}
+
+.custom-nav-style li:hover > a {
+    background-color: #F1F3F7;
+}
+
+.custom-nav-style li a {
+    color: black !important;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.custom-nav-style li .active {
+    color: white !important;
+    background-color: #198754 !important;
+}
+
+@media (max-width: 768px) {
+    .custom-nav-style {
+        display: inline-flex !important;
+        flex-direction: column;
+        align-items: center;
+    }
+}

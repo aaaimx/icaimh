@@ -1,0 +1,8 @@
+.animate-contact {
+    transition: all ease-in-out 0.5s;
+}
+
+.animate-contact:hover {
+    transform: scale(1.15);
+    transition: all ease-in-out 0.5s;
+}

@@ -1,0 +1,33 @@
+html {
+    scroll-padding-top: 86px;
+}
+
+.section-will {
+    background-color: #F8F9FA;
+}
+
+.menu-hover:hover {
+    color: #FFFFFF !important;
+    transition: ease all 0.2s !important;
+    background-color: #198754;
+}
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 2.5em;
+    display: none;
+    z-index: 10000 !important;
+    transition: ease all 0.2s !important;
+}
+
+.in-progress {
+    height: 100vh;
+    background-color: white;
+    z-index: 10000 !important;
+    transition: ease all 1s !important;
+
+    --wave-diameter: 220px;
+    --wave-thickness: 9px;
+    --wave-duration: 3s;
+}

@@ -1,0 +1,606 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Referencias Bibliográficas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <style>
+    /* Estilos generales */
+    body {
+      background-color: #f8f9fa;
+    }
+    .container {
+      max-width: 1140px;
+    }
+    
+    /* Estilos de los controles superiores */
+    .bib-top-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+    .bib-reference-count {
+      background-color: #f8f9fa;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    .bib-filter-container {
+      flex-grow: 1;
+      max-width: 400px;
+      margin-left: 1rem;
+    }
+    .bib-filter-input {
+      border-radius: 20px;
+      padding-left: 1rem;
+    }
+    
+    /* Estilos de la tarjeta de referencia */
+    .bib-reference {
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      border: 1px solid rgba(0,0,0,0.125);
+      border-radius: 0.375rem;
+      transition: all 0.2s ease-in-out;
+    }
+    .bib-reference:hover {
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+    }
+    .bib-reference .card-header {
+      background-color: rgba(0,0,0,0.03);
+      padding: 0.75rem 1rem;
+    }
+    .bib-reference-type {
+      text-transform: capitalize;
+    }
+    .bib-reference-key {
+      font-family: monospace;
+      font-size: 0.8rem;
+    }
+    
+    /* Estilos del contenido */
+    .bib-title {
+      font-weight: 600;
+      color: #212529;
+      margin-bottom: 0.75rem;
+    }
+    .bib-authors {
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+    .bib-authors-list {
+      color: #495057;
+    }
+    .bib-details {
+      color: #6c757d;
+      font-size: 0.95rem;
+    }
+    .bib-journal, .bib-booktitle, .bib-publisher {
+      font-weight: 500;
+      color: #495057;
+    }
+    .bib-volume, .bib-number, .bib-pages, .bib-year, .bib-address {
+      color: #6c757d;
+    }
+    
+    /* Estilos para abstract y keywords */
+    .bib-abstract-summary {
+      cursor: pointer;
+      color: #007bff;
+      font-weight: 500;
+    }
+    .bib-abstract-summary:hover {
+      text-decoration: underline;
+    }
+    .bib-abstract-text {
+      font-size: 0.9rem;
+      color: #495057;
+      padding: 0.5rem;
+      background-color: #f8f9fa;
+      border-radius: 0.25rem;
+    }
+    .bib-keywords-label {
+      font-weight: 600;
+    }
+    .bib-keywords-text {
+      color: #6c757d;
+    }
+    
+    /* Estilos para el pie de la tarjeta */
+    .bib-footer {
+      background-color: #f8f9fa;
+      border-top: 1px solid rgba(0,0,0,0.125);
+      padding: 0.75rem 1rem;
+    }
+    .bib-links {
+      display: flex;
+      gap: 0.5rem;
+    }
+    
+    /* Estilos para cuando no hay referencias */
+    .bib-no-references {
+      padding: 3rem;
+      text-align: center;
+      background-color: #f8f9fa;
+      border-radius: 0.375rem;
+      color: #6c757d;
+      border: 1px dashed #dee2e6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-5">
+    <h1 class="mb-4">Referencias Bibliográficas</h1>
+    <div class="bib-top-controls">
+      <div class="bib-reference-count">
+        Total de referencias: <span class="badge bg-primary">16</span>
+      </div>
+      <div id="filter-container" class="bib-filter-container">
+        <input type="text" id="filter-input" class="form-control bib-filter-input" placeholder="Filtrar referencias...">
+      </div>
+    </div>
+    <div class="bib-references">      <div class="card mb-3 bib-reference" id="ref-salas_zarate_2023_7955490">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <span class="bib-reference-type badge bg-primary">misc</span>
+          <span class="bib-reference-key badge bg-secondary">[salas_zarate_2023_7955490]</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title bib-title">Identification of depression signs in social media
+through natural language processing techniques</h5>
+          <p class="card-text bib-authors">
+            <i class="bi bi-people"></i>
+            <span class="bib-authors-list">Salas-Zárate, Rafael and
+Alor-Hernández, Giner and
+Salas-Zárate, María del Pilar and
+Paredes-Valverde, Mario Andrés and
+Bustos-López, Maritza and
+Sánchez-Cervantes, José Luis</span>
+          </p>
+          <div class="bib-details">
+          </div>
+        </div>
+        <div class="card-footer bib-footer">
+          <div class="bib-links">
+            <a href="https://doi.org/10.5281/zenodo.7955490" class="btn btn-sm btn-outline-primary bib-doi-link" target="_blank">
+              <span class="bib-doi-text">DOI: 10.5281/zenodo.7955490</span>
+            </a>
+            <a href="https://doi.org/10.5281/zenodo.7955490" class="btn btn-sm btn-outline-secondary bib-url-link ms-1" target="_blank">
+              <span class="bib-url-text">Ver recurso</span>
+            </a>
+          </div>
+      </div>
+      <div class="card mb-3 bib-reference" id="ref-muniz_jimenez_2023_7955503">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <span class="bib-reference-type badge bg-primary">misc</span>
+          <span class="bib-reference-key badge bg-secondary">[muniz_jimenez_2023_7955503]</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title bib-title">The computational study of anxiety with an
+algorithm of artificial intelligence</h5>
+          <p class="card-text bib-authors">
+            <i class="bi bi-people"></i>
+            <span class="bib-authors-list">Muñiz-Jiménez, Alicia and
+Bouzas, Arturo</span>
+          </p>
+          <div class="bib-details">
+          </div>
+        </div>
+        <div class="card-footer bib-footer">
+          <div class="bib-links">
+            <a href="https://doi.org/10.5281/zenodo.7955503" class="btn btn-sm btn-outline-primary bib-doi-link" target="_blank">
+              <span class="bib-doi-text">DOI: 10.5281/zenodo.7955503</span>
+            </a>
+            <a href="https://doi.org/10.5281/zenodo.7955503" class="btn btn-sm btn-outline-secondary bib-url-link ms-1" target="_blank">
+              <span class="bib-url-text">Ver recurso</span>
+            </a>
+          </div>
+      </div>
+      <div class="card mb-3 bib-reference" id="ref-contreras_ibanez_2023_7955509">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <span class="bib-reference-type badge bg-primary">misc</span>
+          <span class="bib-reference-key badge bg-secondary">[contreras_ibanez_2023_7955509]</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title bib-title">Procedures for training a ChatGPT-based
+classification for mental health screening in a
+college population</h5>
+          <p class="card-text bib-authors">
+            <i class="bi bi-people"></i>
+            <span class="bib-authors-list">Contreras-Ibáñez, Carlos C. and
+Santamaría-Garcés, Yoltic E.</span>
+          </p>
+          <div class="bib-details">
+          </div>
+        </div>
+        <div class="card-footer bib-footer">
+          <div class="bib-links">
+            <a href="https://doi.org/10.5281/zenodo.7955509" class="btn btn-sm btn-outline-primary bib-doi-link" target="_blank">
+              <span class="bib-doi-text">DOI: 10.5281/zenodo.7955509</span>
+            </a>
+            <a href="https://doi.org/10.5281/zenodo.7955509" class="btn btn-sm btn-outline-secondary bib-url-link ms-1" target="_blank">
+              <span class="bib-url-text">Ver recurso</span>
+            </a>
+          </div>
+      </div>
+      <div class="card mb-3 bib-reference" id="ref-sotelo_2023_7955511">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <span class="bib-reference-type badge bg-primary">misc</span>
+          <span class="bib-reference-key badge bg-secondary">[sotelo_2023_7955511]</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title bib-title">Proposal of psychological intervention for the
+emotional regulation of the students of the
+University of Sonora</h5>
+          <p class="card-text bib-authors">
+            <i class="bi bi-people"></i>
+            <span class="bib-authors-list">Sotelo, Teresa and
+Domínguez, Miriam and
+Manzanares, Leonardo</span>
+          </p>
+          <div class="bib-details">
+          </div>
+        </div>
+        <div class="card-footer bib-footer">
+          <div class="bib-links">
+            <a href="https://doi.org/10.5281/zenodo.7955511" class="btn btn-sm btn-outline-primary bib-doi-link" target="_blank">
+              <span class="bib-doi-text">DOI: 10.5281/zenodo.7955511</span>
+            </a>
+            <a href="https://doi.org/10.5281/zenodo.7955511" class="btn btn-sm btn-outline-secondary bib-url-link ms-1" target="_blank">
+              <span class="bib-url-text">Ver recurso</span>
+            </a>
+          </div>
+      </div>
+      <div class="card mb-3 bib-reference" id="ref-aguilar_lopez_2023_7955513">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <span class="bib-reference-type badge bg-primary">misc</span>
+          <span class="bib-reference-key badge bg-secondary">[aguilar_lopez_2023_7955513]</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title bib-title">Ethical implications of the use of technology in
+the training and professional practice of
+psychology</h5>
+          <p class="card-text bib-authors">
+            <i class="bi bi-people"></i>
+            <span class="bib-authors-list">Aguilar-López, Daniel Rodrigo</span>
+          </p>
+          <div class="bib-details">
+          </div>
+        </div>
+        <div class="card-footer bib-footer">
+          <div class="bib-links">
+            <a href="https://doi.org/10.5281/zenodo.7955513" class="btn btn-sm btn-outline-primary bib-doi-link" target="_blank">
+              <span class="bib-doi-text">DOI: 10.5281/zenodo.7955513</span>
+            </a>
+            <a href="https://doi.org/10.5281/zenodo.7955513" class="btn btn-sm btn-outline-secondary bib-url-link ms-1" target="_blank">
+              <span class="bib-url-text">Ver recurso</span>
+            </a>
+          </div>
+      </div>
+      <div class="card mb-3 bib-reference" id="ref-ortiz_cruz_2023_7955524">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <span class="bib-reference-type badge bg-primary">misc</span>
+          <span class="bib-reference-key badge bg-secondary">[ortiz_cruz_2023_7955524]</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title bib-title">Dinámica de la actividad electroencefalográfica en
+el autismo y su modificación con estimulación
+magnética transcraneal</h5>
+          <p class="card-text bib-authors">
+            <i class="bi bi-people"></i>
+            <span class="bib-authors-list">Ortiz-Cruz, Elisa Ester and
+Ayala-Guerrero, Fructuoso and
+Bernal-Hernández, Jorge</span>
+          </p>
+          <div class="bib-details">
+          </div>
+        </div>
+        <div class="card-footer bib-footer">
+          <div class="bib-links">
+            <a href="https://doi.org/10.5281/zenodo.7955524" class="btn btn-sm btn-outline-primary bib-doi-link" target="_blank">
+              <span class="bib-doi-text">DOI: 10.5281/zenodo.7955524</span>
+            </a>
+            <a href="https://doi.org/10.5281/zenodo.7955524" class="btn btn-sm btn-outline-secondary bib-url-link ms-1" target="_blank">
+              <span class="bib-url-text">Ver recurso</span>
+            </a>
+          </div>
+      </div>
+      <div class="card mb-3 bib-reference" id="ref-sosa_espadas_2023_7955530">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <span class="bib-reference-type badge bg-primary">misc</span>
+          <span class="bib-reference-key badge bg-secondary">[sosa_espadas_2023_7955530]</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title bib-title">Psychological mental health questionnaire
+refinement through dimensionality reduction using
+machine learning and XAI techniques</h5>
+          <p class="card-text bib-authors">
+            <i class="bi bi-people"></i>
+            <span class="bib-authors-list">Sosa-Espadas, Cristian Elohim</span>
+          </p>
+          <div class="bib-details">
+          </div>
+        </div>
+        <div class="card-footer bib-footer">
+          <div class="bib-links">
+            <a href="https://doi.org/10.5281/zenodo.7955530" class="btn btn-sm btn-outline-primary bib-doi-link" target="_blank">
+              <span class="bib-doi-text">DOI: 10.5281/zenodo.7955530</span>
+            </a>
+            <a href="https://doi.org/10.5281/zenodo.7955530" class="btn btn-sm btn-outline-secondary bib-url-link ms-1" target="_blank">
+              <span class="bib-url-text">Ver recurso</span>
+            </a>
+          </div>
+      </div>
+      <div class="card mb-3 bib-reference" id="ref-cuevas_cuevas_2023_7955536">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <span class="bib-reference-type badge bg-primary">misc</span>
+          <span class="bib-reference-key badge bg-secondary">[cuevas_cuevas_2023_7955536]</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title bib-title">Exploratory Data Analysis to Identify the
+Relationship between Depression-Anxiety and
+Spiritual-Religious Factors among Undergraduate
+Students</h5>
+          <p class="card-text bib-authors">
+            <i class="bi bi-people"></i>
+            <span class="bib-authors-list">Cuevas-Cuevas, Nora and
+Orozco-del-Castillo, Esperanza Carolina</span>
+          </p>
+          <div class="bib-details">
+          </div>
+        </div>
+        <div class="card-footer bib-footer">
+          <div class="bib-links">
+            <a href="https://doi.org/10.5281/zenodo.7955536" class="btn btn-sm btn-outline-primary bib-doi-link" target="_blank">
+              <span class="bib-doi-text">DOI: 10.5281/zenodo.7955536</span>
+            </a>
+            <a href="https://doi.org/10.5281/zenodo.7955536" class="btn btn-sm btn-outline-secondary bib-url-link ms-1" target="_blank">
+              <span class="bib-url-text">Ver recurso</span>
+            </a>
+          </div>
+      </div>
+      <div class="card mb-3 bib-reference" id="ref-cetina_aguilar_2023_7955542">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <span class="bib-reference-type badge bg-primary">misc</span>
+          <span class="bib-reference-key badge bg-secondary">[cetina_aguilar_2023_7955542]</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title bib-title">Identification of depressive symptoms through
+acoustic analysis of the voice using convolutional
+neural networks</h5>
+          <p class="card-text bib-authors">
+            <i class="bi bi-people"></i>
+            <span class="bib-authors-list">Cetina-Aguilar, Manuel Antonio</span>
+          </p>
+          <div class="bib-details">
+          </div>
+        </div>
+        <div class="card-footer bib-footer">
+          <div class="bib-links">
+            <a href="https://doi.org/10.5281/zenodo.7955542" class="btn btn-sm btn-outline-primary bib-doi-link" target="_blank">
+              <span class="bib-doi-text">DOI: 10.5281/zenodo.7955542</span>
+            </a>
+            <a href="https://doi.org/10.5281/zenodo.7955542" class="btn btn-sm btn-outline-secondary bib-url-link ms-1" target="_blank">
+              <span class="bib-url-text">Ver recurso</span>
+            </a>
+          </div>
+      </div>
+      <div class="card mb-3 bib-reference" id="ref-sanchez_sanchez_2023_7955628">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <span class="bib-reference-type badge bg-primary">misc</span>
+          <span class="bib-reference-key badge bg-secondary">[sanchez_sanchez_2023_7955628]</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title bib-title">Implementation of techniques for the treatment of
+anxiety symptoms for the development of a video
+game with biofeedback</h5>
+          <p class="card-text bib-authors">
+            <i class="bi bi-people"></i>
+            <span class="bib-authors-list">Sánchez-Sánchez, Alejandro</span>
+          </p>
+          <div class="bib-details">
+          </div>
+        </div>
+        <div class="card-footer bib-footer">
+          <div class="bib-links">
+            <a href="https://doi.org/10.5281/zenodo.7955628" class="btn btn-sm btn-outline-primary bib-doi-link" target="_blank">
+              <span class="bib-doi-text">DOI: 10.5281/zenodo.7955628</span>
+            </a>
+            <a href="https://doi.org/10.5281/zenodo.7955628" class="btn btn-sm btn-outline-secondary bib-url-link ms-1" target="_blank">
+              <span class="bib-url-text">Ver recurso</span>
+            </a>
+          </div>
+      </div>
+      <div class="card mb-3 bib-reference" id="ref-perez_perez_2023_7955638">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <span class="bib-reference-type badge bg-primary">misc</span>
+          <span class="bib-reference-key badge bg-secondary">[perez_perez_2023_7955638]</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title bib-title">Detection of symptoms of depression using signal
+processing techniques and machine learning from
+voice analysis as a biomarker</h5>
+          <p class="card-text bib-authors">
+            <i class="bi bi-people"></i>
+            <span class="bib-authors-list">Pérez-Pérez, Gerardo Arturo</span>
+          </p>
+          <div class="bib-details">
+          </div>
+        </div>
+        <div class="card-footer bib-footer">
+          <div class="bib-links">
+            <a href="https://doi.org/10.5281/zenodo.7955638" class="btn btn-sm btn-outline-primary bib-doi-link" target="_blank">
+              <span class="bib-doi-text">DOI: 10.5281/zenodo.7955638</span>
+            </a>
+            <a href="https://doi.org/10.5281/zenodo.7955638" class="btn btn-sm btn-outline-secondary bib-url-link ms-1" target="_blank">
+              <span class="bib-url-text">Ver recurso</span>
+            </a>
+          </div>
+      </div>
+      <div class="card mb-3 bib-reference" id="ref-sharma_2023_7955646">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <span class="bib-reference-type badge bg-primary">misc</span>
+          <span class="bib-reference-key badge bg-secondary">[sharma_2023_7955646]</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title bib-title">Performance Analysis of bGWO in Selecting the
+Optimal Heart Rate Variability Features for Stress
+Diagnosis</h5>
+          <p class="card-text bib-authors">
+            <i class="bi bi-people"></i>
+            <span class="bib-authors-list">Sharma, Samriti and
+Singh, Gurvinder</span>
+          </p>
+          <div class="bib-details">
+          </div>
+        </div>
+        <div class="card-footer bib-footer">
+          <div class="bib-links">
+            <a href="https://doi.org/10.5281/zenodo.7955646" class="btn btn-sm btn-outline-primary bib-doi-link" target="_blank">
+              <span class="bib-doi-text">DOI: 10.5281/zenodo.7955646</span>
+            </a>
+            <a href="https://doi.org/10.5281/zenodo.7955646" class="btn btn-sm btn-outline-secondary bib-url-link ms-1" target="_blank">
+              <span class="bib-url-text">Ver recurso</span>
+            </a>
+          </div>
+      </div>
+      <div class="card mb-3 bib-reference" id="ref-varguez_zapata_2023_7955654">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <span class="bib-reference-type badge bg-primary">misc</span>
+          <span class="bib-reference-key badge bg-secondary">[varguez_zapata_2023_7955654]</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title bib-title">A video game to support the diagnosis and
+treatment of attention deficit</h5>
+          <p class="card-text bib-authors">
+            <i class="bi bi-people"></i>
+            <span class="bib-authors-list">Várguez-Zapata, Pablo Emmanuel and
+Uc-Valladares, Alejandra</span>
+          </p>
+          <div class="bib-details">
+          </div>
+        </div>
+        <div class="card-footer bib-footer">
+          <div class="bib-links">
+            <a href="https://doi.org/10.5281/zenodo.7955654" class="btn btn-sm btn-outline-primary bib-doi-link" target="_blank">
+              <span class="bib-doi-text">DOI: 10.5281/zenodo.7955654</span>
+            </a>
+            <a href="https://doi.org/10.5281/zenodo.7955654" class="btn btn-sm btn-outline-secondary bib-url-link ms-1" target="_blank">
+              <span class="bib-url-text">Ver recurso</span>
+            </a>
+          </div>
+      </div>
+      <div class="card mb-3 bib-reference" id="ref-matos_pech_2023_7955668">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <span class="bib-reference-type badge bg-primary">misc</span>
+          <span class="bib-reference-key badge bg-secondary">[matos_pech_2023_7955668]</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title bib-title">Analysis of support in the identification of
+cognitive distortions in young adults through an
+ad hoc video game</h5>
+          <p class="card-text bib-authors">
+            <i class="bi bi-people"></i>
+            <span class="bib-authors-list">Matos-Pech, Ángel Jesús and
+Orozco-del-Castillo, Esperanza Carolina</span>
+          </p>
+          <div class="bib-details">
+          </div>
+        </div>
+        <div class="card-footer bib-footer">
+          <div class="bib-links">
+            <a href="https://doi.org/10.5281/zenodo.7955668" class="btn btn-sm btn-outline-primary bib-doi-link" target="_blank">
+              <span class="bib-doi-text">DOI: 10.5281/zenodo.7955668</span>
+            </a>
+            <a href="https://doi.org/10.5281/zenodo.7955668" class="btn btn-sm btn-outline-secondary bib-url-link ms-1" target="_blank">
+              <span class="bib-url-text">Ver recurso</span>
+            </a>
+          </div>
+      </div>
+      <div class="card mb-3 bib-reference" id="ref-rivero_baas_2023_7983301">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <span class="bib-reference-type badge bg-primary">misc</span>
+          <span class="bib-reference-key badge bg-secondary">[rivero_baas_2023_7983301]</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title bib-title">A review of the use of video games for the
+assessment of anxiety</h5>
+          <p class="card-text bib-authors">
+            <i class="bi bi-people"></i>
+            <span class="bib-authors-list">Rivero-Baas, Alejandro Jesús</span>
+          </p>
+          <div class="bib-details">
+          </div>
+        </div>
+        <div class="card-footer bib-footer">
+          <div class="bib-links">
+            <a href="https://doi.org/10.5281/zenodo.7983301" class="btn btn-sm btn-outline-primary bib-doi-link" target="_blank">
+              <span class="bib-doi-text">DOI: 10.5281/zenodo.7983301</span>
+            </a>
+            <a href="https://doi.org/10.5281/zenodo.7983301" class="btn btn-sm btn-outline-secondary bib-url-link ms-1" target="_blank">
+              <span class="bib-url-text">Ver recurso</span>
+            </a>
+          </div>
+      </div>
+      <div class="card mb-3 bib-reference" id="ref-martin_casado_2023_7983313">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <span class="bib-reference-type badge bg-primary">misc</span>
+          <span class="bib-reference-key badge bg-secondary">[martin_casado_2023_7983313]</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title bib-title">An explainable artificial intelligence model for
+the prediction of childbirth development from
+psychological indicators of anxiety</h5>
+          <p class="card-text bib-authors">
+            <i class="bi bi-people"></i>
+            <span class="bib-authors-list">Martin-Casado, Ana and
+Recio-Garcia, Juan A.</span>
+          </p>
+          <div class="bib-details">
+          </div>
+        </div>
+        <div class="card-footer bib-footer">
+          <div class="bib-links">
+            <a href="https://doi.org/10.5281/zenodo.7983313" class="btn btn-sm btn-outline-primary bib-doi-link" target="_blank">
+              <span class="bib-doi-text">DOI: 10.5281/zenodo.7983313</span>
+            </a>
+            <a href="https://doi.org/10.5281/zenodo.7983313" class="btn btn-sm btn-outline-secondary bib-url-link ms-1" target="_blank">
+              <span class="bib-url-text">Ver recurso</span>
+            </a>
+          </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Funcionalidad de filtrado
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterInput = document.getElementById('filter-input');
+      const references = document.querySelectorAll('.bib-reference');
+      
+      filterInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+        let visibleCount = 0;
+        
+        references.forEach(function(reference) {
+          const text = reference.textContent.toLowerCase();
+          if (text.includes(searchTerm)) {
+            reference.style.display = '';
+            visibleCount++;
+          } else {
+            reference.style.display = 'none';
+          }
+        });
+        
+        // Actualizar contador
+        document.querySelector('.bib-reference-count .badge').textContent = visibleCount;
+      });
+    });
+  </script>
+</body>
+</html>
