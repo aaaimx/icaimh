@@ -1,0 +1,45 @@
+<?php
+include("src/components/partnerComponent.php");
+include("src/objects/organizers.php");
+include("src/objects/sponsors.php")
+?>
+<!-- ======= Start Institutions Section ======= -->
+<section
+  id="partners"
+  class="px-4"
+  style="max-width: 1300px; margin: auto">
+  <div class="container p-4 p-md-5 text-center">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="mb-3">LOCAL ORGANIZERS</h1>
+        <img
+          src="/public/img/anahuac.png"
+          class="w-100 img-fluid m-5"
+          alt="..." />
+      </div>
+    </div>
+  </div>
+
+  <div class="container py-5 text-center">
+    <h1 class="py-2">PROGRAM ORGANIZERS</h1>
+    <div class="row">
+      <?php
+      foreach ($organizers as $organizer) {
+        renderPartner($organizer["name"], $organizer["img"], $organizer["url"]);
+      }
+      ?>
+    </div>
+  </div>
+
+  <div class="container py-5 text-center">
+    <h1 class="py-2">PARTNERS/SPONSORS</h1>
+    <div class="row">
+      <?php
+      foreach ($sponsors as $sponsor) {
+        renderPartner($sponsor["name"], $sponsor["img"], $sponsor["url"]);
+      }
+      ?>
+    </div>
+  </div>
+</section>
+<!-- ======= End Institutions Section ======= -->
