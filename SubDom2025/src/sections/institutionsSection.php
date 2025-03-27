@@ -14,13 +14,13 @@ include("src/objects/sponsors.php")
         <h1 class="mb-3">LOCAL ORGANIZERS</h1>
         <img
           src="/public/img/anahuac.png"
-          class="w-100 img-fluid m-5"
+          class="w-25 img-fluid "
           alt="..." />
       </div>
     </div>
   </div>
 
-  <div class="container py-5 text-center">
+  <div class="container text-center">
     <h1 class="py-2">PROGRAM ORGANIZERS</h1>
     <div class="row">
       <?php
