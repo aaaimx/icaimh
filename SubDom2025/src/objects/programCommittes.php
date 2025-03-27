@@ -174,5 +174,12 @@ $programCommittee = [
     "title" => null,
     "university" => "Thompson Rivers University, Canada.",
     "br" => null
+  ],
+  [
+    "first_name" => "Juan Carlos",
+    "last_name" => "Ortiz-Navarro",
+    "title" => null,
+    "university" => "Universidad Juárez Autónoma de Tabasco",
+    "br" => null
   ]
 ];
