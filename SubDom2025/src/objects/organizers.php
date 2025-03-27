@@ -6,7 +6,7 @@ $organizers = [
     "url" => "https://maikron.org",
   ],
   [
-    "name" => "Asociación para la salud Mental de Yucatán",
+    "name" => "Asociación para la Salud Mental de Yucatán",
     "img" => "/public/img/asmy.jpg",
     "url" => "https://www.facebook.com/AsmyMX",
   ],
