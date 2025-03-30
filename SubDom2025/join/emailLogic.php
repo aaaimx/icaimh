@@ -100,13 +100,13 @@ if ($result->num_rows === 0) {
 			</p>
 
 			<a
-				href="http://localhost:8080/join/generarPDF.php?order_id=' . htmlspecialchars($order_id) . '"
+				href="https://2025.icaimh.org/join/generarPDF.php?order_id=' . htmlspecialchars($order_id) . '"
 				target="_blank"
 				class="button"
 				>See Order</a
 			>
 			<a
-				href="http://localhost:8080/join/confirmationPage/?token=' . htmlspecialchars($activation_token) . '&order_id=' . htmlspecialchars($order_id) . '&button_bool=false"
+				href="https://2025.icaimh.org/join/confirmationPage/?token=' . htmlspecialchars($activation_token) . '&order_id=' . htmlspecialchars($order_id) . '"
 				target="_blank"
 				class="button"
 				>Confirm Order</a
@@ -127,7 +127,8 @@ if ($result->num_rows === 0) {
 	$mailSuccess = mail($to, $subject, $message, $headers);
 
 	if ($mailSuccess) {
-		echo "Correo enviado correctamente.";
+		header("Location: confirmationPage/?order_id=" . urlencode($order_id));
+		exit();
 	} else {
 		echo "Error al enviar el correo.";
 	}
