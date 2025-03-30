@@ -158,6 +158,106 @@
         .catch(error => console.error("Error:", error));
     }
   </script>
+  <script>
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+      let errors = [];
+      let phones = new Set();
+      let emails = new Set();
+      let numPersonas = document.getElementById("numPersonasPost").value;
+
+      for (let i = 1; i <= numPersonas; i++) {
+        let firstName = document.getElementById("first_name" + i).value.trim();
+        let lastName = document.getElementById("last_name" + i).value.trim();
+        let email = document.getElementById("email" + i).value.trim();
+        let phone = document.getElementById("phone" + i).value.trim();
+        let affiliation = document.getElementById("affiliation" + i).value.trim();
+        let rol = document.getElementById("rol" + i).value;
+
+        if (!firstName || !lastName || !email || !phone || !affiliation || !rol) {
+          errors.push("Todos los campos del participante " + i + " son obligatorios.");
+        }
+
+        if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          errors.push("El correo del participante " + i + " no es válido.");
+        } else if (email) {
+          if (emails.has(email)) {
+            errors.push(`El correo <b>${email}</b> del participante ${i} ya está en uso.`);
+          } else {
+            emails.add(email);
+          }
+        }
+
+
+        if (phone && !/^\+?\d{10,15}$/.test(phone)) {
+          errors.push("El teléfono del participante " + i + " no es válido.");
+        } else if (phone) {
+          if (phones.has(phone)) {
+            errors.push(`El teléfono <b>${phone}</b> del participante ${i} ya está en uso.`);
+          } else {
+            phones.add(phone);
+          }
+        }
+      }
+
+      // if (errors.length > 0) {
+      //   event.preventDefault(); // Detiene el envío del formulario
+      //   let errorContainer = document.getElementById("errorMessages");
+      //   errorContainer.innerHTML = "<div class='alert alert-danger'>";
+      //   errors.forEach(error => {
+      //     errorContainer.innerHTML += "<p>" + error + "</p>";
+      //   });
+      //   errorContainer.innerHTML += "</div>";
+      // }
+
+      if (errors.length > 0) {
+        event.preventDefault(); // Detiene el envío del formulario
+
+        // Obtener el contenedor de errores
+        const errorContainer = document.getElementById("errorMessages");
+
+        // Limpiar cualquier mensaje anterior
+        errorContainer.innerHTML = "";
+
+        // Crear el contenedor de alerta
+        const alertDiv = document.createElement("div");
+        alertDiv.className = "alert alert-danger animate__animated animate__fadeIn";
+        alertDiv.role = "alert";
+
+        // Agregar encabezado a la alerta
+        const alertHeader = document.createElement("h5");
+        alertHeader.className = "alert-heading";
+        alertHeader.innerHTML = '<i class="bi bi-exclamation-triangle-fill me-2"></i>Please correct the following errors:';
+        alertDiv.appendChild(alertHeader);
+
+        // Agregar un divisor
+        const divider = document.createElement("hr");
+        alertDiv.appendChild(divider);
+
+        // Crear una lista para los errores
+        const errorList = document.createElement("div");
+        errorList.className = "mb-0";
+
+        // Agregar cada error como un elemento de lista
+        errors.forEach(error => {
+          const errorItem = document.createElement("p");
+          errorItem.textContent = error;
+          errorList.appendChild(errorItem);
+        });
+
+        // Agregar la lista a la alerta
+        alertDiv.appendChild(errorList);
+
+        // Agregar la alerta al contenedor
+        errorContainer.appendChild(alertDiv);
+
+        // Desplazarse hasta los mensajes de error
+        errorContainer.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>
