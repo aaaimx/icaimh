@@ -30,7 +30,7 @@ if ($result->num_rows === 0) {
 	exit();
 } else {
 	// Configuración del correo
-	$to = "angel.d.aldaz@gmail.com";
+	$to = "icaimh2025@icaimh.org";
 	$subject = 'ICAIMH 2025 Registration Invoice';
 
 	// Mensaje HTML con el botón
