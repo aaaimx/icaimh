@@ -110,7 +110,7 @@
   $buttonBool = true;
   if (isset($_GET['token'])) {
     $token = $_GET['token'];
-    include("../src/db/db.php"); // Asegúrate de incluir la conexión a la BD
+    include("../../src/db/db.php"); // Asegúrate de incluir la conexión a la BD
     if (!$conn->connect_error) {
       // Iniciar transacción
       $conn->begin_transaction();
