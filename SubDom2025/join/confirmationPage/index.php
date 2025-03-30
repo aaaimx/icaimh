@@ -1,3 +1,53 @@
+<?php
+$order_id = isset($_GET['order_id']) ? $_GET['order_id'] : 'Desconocido';
+$buttonBool = true;
+if (isset($_GET['token'])) {
+  $token = $_GET['token'];
+  include("../../src/db/db.php"); // Asegúrate de incluir la conexión a la BD
+  if (!$conn->connect_error) {
+    // Iniciar transacción
+    $conn->begin_transaction();
+    try {
+      // Obtener los participantes y los precios de los roles
+      $stmt = $conn->prepare("
+          UPDATE `Orders` 
+          SET paid = 1 
+          WHERE activation_token = ? AND paid = 0;
+      ");
+      $stmt->bind_param("s", $token);
+      $stmt->execute();
+
+      // Verificar si se actualizó alguna fila
+      if ($stmt->affected_rows > 0) {
+        // La actualización fue exitosa (se cambió al menos una fila)
+        $stmt->close();
+        $conn->commit();
+        $conn->close();
+        $buttonBool = false;
+        // header("Location: confirmationPage/?order_id=" . urlencode($order_id) . "&button_bool=false");
+        // exit();
+      } else {
+        // No se actualizó ninguna fila (token no encontrado o ya estaba pagado)
+        $stmt->close();
+        $conn->rollback(); // Es mejor hacer rollback si no hubo cambios
+        $conn->close();
+        // Mensaje genérico para otros errores
+        $errorMesage = "Token no encontrado o ya estaba pagado.";
+        $suggestion = "Consulte con el administrador.";
+        header("Location: ../error/?error_message=" . urlencode($errorMesage) . "&suggestion=" . urlencode($suggestion));
+        exit();
+      }
+    } catch (Exception $e) {
+      $conn->rollback();
+      // Mensaje genérico para otros errores
+      $errorMesage = "Ocurrió un error al procesar tu solicitud.";
+      $suggestion = "Inténtalo de nuevo más tarde.";
+      header("Location: ../error/?error_message=" . urlencode($errorMesage) . "&suggestion=" . urlencode($suggestion));
+      exit();
+    }
+  }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -106,39 +156,6 @@
 <body>
   <?php
   include("../../src/sections/navBar.php");
-  $order_id = isset($_GET['order_id']) ? $_GET['order_id'] : 'Desconocido';
-  $buttonBool = true;
-  if (isset($_GET['token'])) {
-    $token = $_GET['token'];
-    include("../../src/db/db.php"); // Asegúrate de incluir la conexión a la BD
-    if (!$conn->connect_error) {
-      // Iniciar transacción
-      $conn->begin_transaction();
-      try {
-        // Obtener los participantes y los precios de los roles
-        $stmt = $conn->prepare("
-          UPDATE orders 
-          SET paid = 1 
-          WHERE activation_token = ? AND paid = 0;
-      ");
-        $stmt->bind_param("s", $token);
-        $stmt->execute();
-        $stmt->close();
-        $conn->commit();
-        $conn->close();
-        // header("Location: confirmationPage/?order_id=" . urlencode($order_id) . "&button_bool=false");
-        // exit();
-        $buttonBool = false;
-      } catch (Exception $e) {
-        $conn->rollback();
-        // Mensaje genérico para otros errores
-        $errorMesage = "Ocurrió un error al procesar tu solicitud.";
-        $suggestion = "Inténtalo de nuevo más tarde.";
-        header("Location: error/?error_message=" . urlencode($errorMesage) . "&suggestion=" . urlencode($suggestion));
-        exit();
-      }
-    }
-  }
   ?>
 
   <main id="main">
