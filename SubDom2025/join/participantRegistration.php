@@ -118,7 +118,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
       // Redirigir al archivo generarPDF.php con el ID de la orden
       // header("Location: generarPDF.php?order_id=" . urlencode($order_id));
-      header("Location: emailLogic.php/?order_id=" . urlencode($order_id));
+      header("Location: emailLogic.php?order_id=" . urlencode($order_id));
       // header("Location: confirmationPage/?order_id=" . urlencode($order_id));
       exit();
     } catch (Exception $e) {
