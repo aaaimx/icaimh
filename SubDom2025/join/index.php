@@ -47,6 +47,19 @@
     type="text/javascript"
     src="https://kit.fontawesome.com/45786511e1.js"
     crossorigin="anonymous"></script>
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex-grow: 1;
+    }
+  </style>
 </head>
 
 <body>
@@ -55,11 +68,9 @@
   ?>
 
   <main id="main">
-    <section
-      id="organizers"
-      class="px-2 text-center"
-      style="max-width: 1300px; margin: auto">
-      <h1 class="d-inline-block">ICAIMH 2025 REGISTRATION</h1>
+    <section id="registration" class="px-2 text-center" style="max-width: 1300px; margin: auto">
+      <h1 class="d-inline-block mb-4">ICAIMH 2025 REGISTRATION</h1>
+
       <div class="d-flex justify-content-center">
         <div class="testimonial3 py-2">
           <div class="container">
