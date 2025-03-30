@@ -75,31 +75,33 @@
         <div class="testimonial3 py-2">
           <div class="container">
             <div class="testi3 row justify-content-center">
-              <!-- CARD 1 -->
-              <div class="col my-3 min-size">
-                <div class="card card-shadow border-0 h-100">
-                  <div
-                    class="card-body d-flex flex-column justify-content-evenly">
-                    <h4 class="mb-4">¿Cuántas personas desea registrar?</h4>
+              <!-- Initial Number of Participants Selection -->
+              <div class="col my-3" id="participantNumberSelection">
+                <div class="card card-shadow border-0 h-100 pt-3 px-2" style="border-radius: 0.8rem;">
+                  <div class="card-body d-flex flex-column justify-content-evenly">
+                    <h4 class="mb-4">How many people do you want to register?</h4>
                     <div class="form-group mb-4">
                       <div class="input-group">
                         <span class="input-group-text"><i class="fas fa-users"></i></span>
-                        <input
-                          type="number"
-                          class="form-control"
-                          id="numPersonas"
-                          min="1"
-                          max="10"
-                          value="1" />
+                        <input type="number" class="form-control" id="numPersonas" min="1" max="10" value="1" />
                       </div>
-                      <button
-                        class="btn btn-orange mt-3"
-                        onclick="generarFormularioPersonas()">
+                      <button class="btn btn-orange mt-4" id="continueButton" onclick="showParticipantForms()">
                         Continue to Registration
                       </button>
                     </div>
                   </div>
                 </div>
+              </div>
+
+              <!-- Participant Forms Container -->
+              <div class="col-12 mb-3" id="participantFormsContainer" style="display: none;">
+                <form id="registrationForm" method="POST" action="participantRegistration.php">
+                  <div id="participantForms">
+                  </div>
+                  <input type="number" id="numPersonasPost" name="numPersonasPost" value="1" hidden />
+                  <div id="errorMessages"></div>
+                  <button type="submit" class="btn btn-success mt-3">Submit Registration</button>
+                </form>
               </div>
             </div>
           </div>
@@ -129,6 +131,33 @@
   <script src="../src/js/main.js"></script>
   <script src="../src/js/main2.js"></script>
   <script src="../src/js/main3.js"></script>
+
+  <script>
+    function showParticipantForms() {
+      const continueButton = document.getElementById('continueButton');
+      const numPersonas = document.getElementById('numPersonas').value;
+      const numPersonasPost = document.getElementById('numPersonasPost');
+      numPersonasPost.value = numPersonas;
+
+      // Deshabilitar el botón mientras se carga la solicitud
+      continueButton.disabled = true;
+      continueButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...';
+      // continueButton.textContent = '';
+
+      // Enviar el número de participantes al servidor usando AJAX o directamente en PHP
+      fetch(`/join/dataFormComponent.php?numParticipants=${numPersonas}`)
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById("participantForms").innerHTML = html;
+        })
+        .finally(() => {
+          // Hide number selection, show participant forms
+          participantNumberSelection.style.display = 'none';
+          participantFormsContainer.style.display = 'block';
+        })
+        .catch(error => console.error("Error:", error));
+    }
+  </script>
 </body>
 
 </html>
