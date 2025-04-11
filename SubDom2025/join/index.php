@@ -69,7 +69,7 @@
 
   <main id="main">
     <section id="registration" class="px-2 text-center" style="max-width: 1300px; margin: auto">
-      <h1 class="d-inline-block mb-4">ICAIMH 2025 REGISTRATION</h1>
+      <h1 class="d-inline-block mb-2">ICAIMH 2025 REGISTRATION</h1>
 
       <div class="d-flex justify-content-center">
         <div class="testimonial3 py-2">
@@ -85,7 +85,8 @@
                         <span class="input-group-text"><i class="fas fa-users"></i></span>
                         <input type="number" class="form-control" id="numPersonas" min="1" max="10" value="1" />
                       </div>
-                      <button class="btn btn-orange mt-4" id="continueButton" onclick="showParticipantForms()">
+                      <p class="text-danger mt-2">Please select a number between 1 and 10</p>
+                      <button class="btn btn-orange mt-2" id="continueButton" onclick="showParticipantForms()">
                         Continue to Registration
                       </button>
                     </div>
