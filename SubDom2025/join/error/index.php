@@ -147,11 +147,11 @@
         <h2 class="mb-3">Oops! Something went wrong</h2>
         <p class="lead mb-4">We couldn't process your request.</p>
 
-        <p><?php echo $errorMessage; ?></p>
+        <p><?php echo htmlspecialchars($errorMessage, ENT_QUOTES, 'UTF-8'); ?></p>
         <div class="troubleshooting">
           <h4><i class="bi bi-tools me-2"></i>You might want to try:</h4>
           <ul>
-            <li><?php echo $suggestion; ?></li>
+            <li><?php echo htmlspecialchars($suggestion, ENT_QUOTES, 'UTF-8'); ?></li>
           </ul>
         </div>
 

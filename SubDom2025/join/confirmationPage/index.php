@@ -162,7 +162,7 @@ if (isset($_GET['token'])) {
     <!-- Sección de registro con confirmación mejorada -->
     <section id="registration" class="px-2 text-center" style="max-width: 800px; margin: auto">
       <h1 class="mb-4">ICAIMH 2025 REGISTRATION</h1>
-      <p>Your registration ID: <?php echo $order_id; ?></p>
+      <p>Your registration ID: <?php echo htmlspecialchars($order_id, ENT_QUOTES, 'UTF-8'); ?></p>
       <div class="registration-card animate__animated animate__fadeIn">
         <?php
         if ($buttonBool === true) {
@@ -178,7 +178,7 @@ if (isset($_GET['token'])) {
               <li>Follow us on social media for updates about the conference</li>
             </ul>
           </div>
-          <a href="../generarPDF.php?order_id=<?php echo $order_id; ?>" class="pdf-button" target="_blank">
+          <a href="../generarPDF.php?order_id=<?php echo htmlspecialchars($order_id, ENT_QUOTES, 'UTF-8'); ?>" class="pdf-button" target="_blank">
             <i class="bi bi-file-earmark-pdf me-2"></i> View/Download Registration PDF
           </a>
         <?php
@@ -186,7 +186,7 @@ if (isset($_GET['token'])) {
         ?>
           <i class="bi bi-check-circle-fill confirmation-icon"></i>
           <h2 class="mb-3">Registration successfull!</h2>
-          <p class="lead mb-4">You have successfully confirmed the registraroin with ID: <?php echo $order_id; ?>.</p>
+          <p class="lead mb-4">You have successfully confirmed the registraroin with ID: <?php echo htmlspecialchars($order_id, ENT_QUOTES, 'UTF-8'); ?>.</p>
 
         <?php
         }
