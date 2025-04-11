@@ -195,7 +195,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           if (strpos($stmt->error, 'Duplicate entry') !== false) {
             preg_match("/for key '(.+?)'/", $stmt->error, $matches);
             $campo = $matches[1] ?? 'algún campo único';
-            $errorMesage = "El valor que intentas registrar para <strong>$campo</strong> ya existe en nuestro sistema.";
+            $errorMesage = "El valor que intentas registrar para $campo ya existe en nuestro sistema.";
             $suggestion = "Utiliza un valor diferente.";
             $stmt->close();
             $conn->rollback();
@@ -236,7 +236,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       if (strpos($e->getMessage(), 'Duplicate entry') !== false) {
         preg_match("/for key '(.+?)'/", $e->getMessage(), $matches);
         $campo = $matches[1] ?? 'un campo único';
-        $errorMesage = "El valor que intentas registrar para <strong>$campo</strong> ya existe en nuestro sistema.";
+        $errorMesage = "El valor que intentas registrar para $campo ya existe en nuestro sistema.";
         $suggestion = "Por favor, utiliza un valor diferente o verifica que no te hayas registrado previamente.";
       } else {
         $errorMesage = "Ocurrió un error al procesar tu registro.";
