@@ -69,20 +69,103 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
   if ($valid) {
-    // Iniciar transacción
-    $conn->begin_transaction();
+    // // Iniciar transacción
+    // $conn->begin_transaction();
 
+    // try {
+    //   // 1. Crear la orden
+    //   $order_id = generateUuid();
+    //   $total_price = 0;
+
+    //   // Calcular precio total sumando los precios de los roles
+    //   foreach ($participantes as $participante) {
+    //     $rol_id = $participante['rol'];
+    //     $stmt = $conn->prepare("SELECT price FROM Roles WHERE rol_id = ?");
+    //     $stmt->bind_param("s", $rol_id);
+    //     $stmt->execute();
+    //     $result = $stmt->get_result();
+    //     if ($row = $result->fetch_assoc()) {
+    //       $total_price += $row['price'];
+    //     }
+    //     $stmt->close();
+    //   }
+
+    //   // Insertar la orden
+    //   $stmt = $conn->prepare("INSERT INTO Orders (order_id, total, paid) VALUES (?, ?, 0)");
+    //   $stmt->bind_param("sd", $order_id, $total_price);
+    //   $stmt->execute();
+    //   $stmt->close();
+
+    //   // 2. Insertar participantes y sus relaciones
+    //   foreach ($participantes as $participante) {
+    //     $participant_id = generateUuid();
+
+    //     // Insertar participante
+    //     $stmt = $conn->prepare("INSERT INTO Participants (participant_id, first_name, last_name, email, phone, affiliation, rol_id) VALUES (?, ?, ?, ?, ?, ?, ?)");
+    //     $stmt->bind_param("sssssss", $participant_id, $participante['first_name'], $participante['last_name'], $participante['email'], $participante['phone'], $participante['affiliation'], $participante['rol']);
+    //     $stmt->execute();
+    //     $stmt->close();
+
+    //     // Insertar relación en Participants_Order
+    //     $stmt = $conn->prepare("INSERT INTO Participants_Order (order_id, participant_id) VALUES (?, ?)");
+    //     $stmt->bind_param("ss", $order_id, $participant_id);
+    //     $stmt->execute();
+    //     $stmt->close();
+    //   }
+
+    //   // Confirmar transacción
+    //   $conn->commit();
+
+    //   // Redirigir al archivo generarPDF.php con el ID de la orden
+    //   // header("Location: generarPDF.php?order_id=" . urlencode($order_id));
+    //   header("Location: emailLogic.php?order_id=" . urlencode($order_id));
+    //   // header("Location: confirmationPage/?order_id=" . urlencode($order_id));
+    //   exit();
+    // } catch (Exception $e) {
+    //   // Revertir transacción en caso de error
+    //   $conn->rollback();
+    //   // echo "<p>Ocurrió un error al procesar tu solicitud. Por favor, inténtalo de nuevo más tarde.</p>";
+    //   // echo "<p>Detalles del error: " . $e->getMessage() . "</p>";
+
+    //   // Verificar si es un error de violación de clave única/duplicada
+    //   if (
+    //     strpos($e->getMessage(), 'Duplicate entry') !== false ||
+    //     strpos($e->getMessage(), '1062') !== false ||
+    //     $e->getCode() == 23000
+    //   ) {
+
+    //     // Extraer el nombre del campo duplicado (esto puede variar según tu DBMS)
+    //     preg_match("/for key '(.+?)'/", $e->getMessage(), $matches);
+    //     $campo = $matches[1] ?? 'algún campo único';
+    //     $errorMesage = "El valor que intentas registrar para <strong>$campo</strong> ya existe en nuestro sistema.";
+    //     $suggestion = "Utiliza un valor diferente.";
+    //     header("Location: error/?error_message=" . urlencode($errorMesage) . "&suggestion=" . urlencode($suggestion));
+    //     exit();
+    //   } else {
+    //     // Mensaje genérico para otros errores
+    //     $errorMesage = "Ocurrió un error al procesar tu solicitud.";
+    //     $suggestion = "Inténtalo de nuevo más tarde.";
+    //     header("Location: error/?error_message=" . urlencode($errorMesage) . "&suggestion=" . urlencode($suggestion));
+    //     exit();
+    //   }
+    // }
+    // Iniciar transacción
     try {
-      // 1. Crear la orden
+      // Iniciar transacción
+      $conn->begin_transaction();
+
       $order_id = generateUuid();
       $total_price = 0;
 
-      // Calcular precio total sumando los precios de los roles
+      // 1. Calcular precio total
       foreach ($participantes as $participante) {
         $rol_id = $participante['rol'];
         $stmt = $conn->prepare("SELECT price FROM Roles WHERE rol_id = ?");
+        if (!$stmt) throw new Exception("Falló la preparación de la consulta.");
+
         $stmt->bind_param("s", $rol_id);
-        $stmt->execute();
+        if (!$stmt->execute()) throw new Exception("Falló la ejecución de la consulta.");
+
         $result = $stmt->get_result();
         if ($row = $result->fetch_assoc()) {
           $total_price += $row['price'];
@@ -90,64 +173,86 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->close();
       }
 
-      // Insertar la orden
+      // 2. Insertar la orden
       $stmt = $conn->prepare("INSERT INTO Orders (order_id, total, paid) VALUES (?, ?, 0)");
+      if (!$stmt) throw new Exception("Falló la preparación de la consulta.");
+
       $stmt->bind_param("sd", $order_id, $total_price);
-      $stmt->execute();
+      if (!$stmt->execute()) throw new Exception("Falló la ejecución de la inserción.");
       $stmt->close();
 
-      // 2. Insertar participantes y sus relaciones
+      // 3. Insertar participantes y sus relaciones
       foreach ($participantes as $participante) {
         $participant_id = generateUuid();
 
-        // Insertar participante
+        // Participante
         $stmt = $conn->prepare("INSERT INTO Participants (participant_id, first_name, last_name, email, phone, affiliation, rol_id) VALUES (?, ?, ?, ?, ?, ?, ?)");
+        if (!$stmt) throw new Exception("Falló la preparación de la consulta.");
+
         $stmt->bind_param("sssssss", $participant_id, $participante['first_name'], $participante['last_name'], $participante['email'], $participante['phone'], $participante['affiliation'], $participante['rol']);
-        $stmt->execute();
+        if (!$stmt->execute()) {
+          // Verificar error por campo duplicado
+          if (strpos($stmt->error, 'Duplicate entry') !== false) {
+            preg_match("/for key '(.+?)'/", $stmt->error, $matches);
+            $campo = $matches[1] ?? 'algún campo único';
+            $errorMesage = "El valor que intentas registrar para <strong>$campo</strong> ya existe en nuestro sistema.";
+            $suggestion = "Utiliza un valor diferente.";
+            $stmt->close();
+            $conn->rollback();
+            header("Location: error/?error_message=" . urlencode($errorMesage) . "&suggestion=" . urlencode($suggestion));
+            exit();
+          } else {
+            $stmt->close();
+            throw new Exception("Falló la ejecución de la inserción.");
+          }
+        }
         $stmt->close();
 
-        // Insertar relación en Participants_Order
+        // Relación
         $stmt = $conn->prepare("INSERT INTO Participants_Order (order_id, participant_id) VALUES (?, ?)");
+        if (!$stmt) throw new Exception("Falló la preparación de la consulta.");
+
         $stmt->bind_param("ss", $order_id, $participant_id);
-        $stmt->execute();
+        if (!$stmt->execute()) throw new Exception("Falló la ejecución de la inserción.");
         $stmt->close();
       }
 
-      // Confirmar transacción
+      // 4. Confirmar
       $conn->commit();
-
-      // Redirigir al archivo generarPDF.php con el ID de la orden
-      // header("Location: generarPDF.php?order_id=" . urlencode($order_id));
       header("Location: emailLogic.php?order_id=" . urlencode($order_id));
-      // header("Location: confirmationPage/?order_id=" . urlencode($order_id));
+      exit();
+
+
+      // ========== Manejo de errores genéricos ==========
+      error:
+      $conn->rollback();
+      $errorMesage = "Ocurrió un error al procesar tu solicitud.";
+      $suggestion = "Inténtalo de nuevo más tarde.";
+      header("Location: error/?error_message=" . urlencode($errorMesage) . "&suggestion=" . urlencode($suggestion));
+      exit();
+    } catch (mysqli_sql_exception $e) {
+      $conn->rollback();
+
+      if (strpos($e->getMessage(), 'Duplicate entry') !== false) {
+        preg_match("/for key '(.+?)'/", $e->getMessage(), $matches);
+        $campo = $matches[1] ?? 'un campo único';
+        $errorMesage = "El valor que intentas registrar para <strong>$campo</strong> ya existe en nuestro sistema.";
+        $suggestion = "Por favor, utiliza un valor diferente o verifica que no te hayas registrado previamente.";
+      } else {
+        $errorMesage = "Ocurrió un error al procesar tu registro.";
+        $suggestion = "Por favor, inténtalo de nuevo más tarde.";
+      }
+
+      header("Location: error/?error_message=" . urlencode($errorMesage) . "&suggestion=" . urlencode($suggestion));
       exit();
     } catch (Exception $e) {
-      // Revertir transacción en caso de error
       $conn->rollback();
-      // echo "<p>Ocurrió un error al procesar tu solicitud. Por favor, inténtalo de nuevo más tarde.</p>";
-      // echo "<p>Detalles del error: " . $e->getMessage() . "</p>";
 
-      // Verificar si es un error de violación de clave única/duplicada
-      if (
-        strpos($e->getMessage(), 'Duplicate entry') !== false ||
-        strpos($e->getMessage(), '1062') !== false ||
-        $e->getCode() == 23000
-      ) {
+      $errorMesage = "Error interno: " . $e->getMessage();
+      $suggestion = "Por favor, revisa los datos ingresados o contáctanos si el problema persiste.";
 
-        // Extraer el nombre del campo duplicado (esto puede variar según tu DBMS)
-        preg_match("/for key '(.+?)'/", $e->getMessage(), $matches);
-        $campo = $matches[1] ?? 'algún campo único';
-        $errorMesage = "El valor que intentas registrar para <strong>$campo</strong> ya existe en nuestro sistema.";
-        $suggestion = "Utiliza un valor diferente.";
-        header("Location: error/?error_message=" . urlencode($errorMesage) . "&suggestion=" . urlencode($suggestion));
-        exit();
-      } else {
-        // Mensaje genérico para otros errores
-        $errorMesage = "Ocurrió un error al procesar tu solicitud.";
-        $suggestion = "Inténtalo de nuevo más tarde.";
-        header("Location: error/?error_message=" . urlencode($errorMesage) . "&suggestion=" . urlencode($suggestion));
-        exit();
-      }
+      header("Location: error/?error_message=" . urlencode($errorMesage) . "&suggestion=" . urlencode($suggestion));
+      exit();
     }
   } else {
     $errorMesage = "Error en el Registro.";

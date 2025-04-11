@@ -10,4 +10,10 @@ $usuario = $_ENV['DB_USERNAME'];
 $contrasena = $_ENV['DB_PASSWORD'];
 $base_datos = $_ENV['DB_DATABASE'];
 
+// Habilitar excepciones en MySQLi
+// mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
 $conn = new mysqli($host, $usuario, $contrasena, $base_datos);
+
+// Establecer el charset (recomendado para evitar problemas con acentos)
+// $conn->set_charset("utf8mb4");
