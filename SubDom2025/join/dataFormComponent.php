@@ -1,23 +1,45 @@
 <?php
-include("../src/db/db.php");
-// Verificar conexión
-if ($conn->connect_error) {
-  die("Error de conexión: " . $conn->connect_error);
-}
-
-try {
-  // Obtener todos los roles
-  $stmt = $conn->prepare("SELECT rol_id, rol_name, price FROM Roles");
-  $stmt->execute();
-  $result = $stmt->get_result();
-  $roles = [];
-  while ($row = $result->fetch_assoc()) {
-    $roles[] = $row;
+if (isset($_GET['numParticipants']) && $_GET['numParticipants'] > 0 && $_GET['numParticipants'] <= 10) {
+  include("../src/db/db.php");
+  // Verificar conexión
+  if ($conn->connect_error) {
+    die("Error de conexión: " . $conn->connect_error);
   }
-  $stmt->close();
-} catch (Exception $e) {
-  echo "<h1>Error en la Consulta</h1>";
-  error_log("Error al obtener roles: " . $e->getMessage());
+
+  try {
+    // Obtener todos los roles
+    $stmt = $conn->prepare("SELECT rol_id, rol_name, price FROM Roles");
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $roles = [];
+    while ($row = $result->fetch_assoc()) {
+      $roles[] = $row;
+    }
+    $stmt->close();
+  } catch (Exception $e) {
+    echo "<h1>Error en la Consulta</h1>";
+    error_log("Error al obtener roles: " . $e->getMessage());
+  }
+
+
+  // Obtener el número de participantes desde el parámetro GET
+  if (isset($_GET['numParticipants']) && !empty($roles)) {
+    $numParticipants = intval($_GET['numParticipants']);
+    renderForm($numParticipants, $roles);
+  } else {
+    if (empty($roles)) {
+      echo "<div class='alert alert-danger'>No hay roles disponibles. Contacte al administrador.</div>";
+    } else {
+      header("Location: .");
+    }
+    exit();
+  }
+  // Cerrar conexión
+  $conn->close();
+} else {
+  // recargar la página
+  header("Location: .");
+  exit();
 }
 
 function renderForm($numParticipantes, $roles)
@@ -70,18 +92,3 @@ function renderForm($numParticipantes, $roles)
 <?php
   }
 }
-
-// Obtener el número de participantes desde el parámetro GET
-if (isset($_GET['numParticipants']) && !empty($roles)) {
-  $numParticipants = intval($_GET['numParticipants']);
-  renderForm($numParticipants, $roles);
-} else {
-  if (empty($roles)) {
-    echo "<div class='alert alert-danger'>No hay roles disponibles. Contacte al administrador.</div>";
-  } else {
-    header("Location: .");
-  }
-  exit();
-}
-// Cerrar conexión
-$conn->close();
