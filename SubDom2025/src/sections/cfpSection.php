@@ -572,6 +572,36 @@
         // Iniciar el buffering de salida
         ob_start();
         ?>
+        <p>To ensure the quality and sustainability of ICAIMH 2025, a publication fee of $1,000 MXN will be required for each accepted submission.</p>
+
+        <div class="submission-type mb-4">
+          <h3 class="h5 fw-bold">This fee covers:</h3>
+          <ul>
+            <li>
+              Publication in one of the conference's associated journals (Inteligencia Artificial or JAICA).
+            </li>
+            <li>
+              Certificate of participation.
+            </li>
+            <li>
+              Welcome kit.
+            </li>
+          </ul>
+          <p>
+            Payment details and invoicing instructions will be provided to authors upon acceptance of their submission.
+          </p>
+          <p>
+            For questions regarding payment or billing, please contact us at <a href="mailto:icaimh2025@icaimh.org">icaimh2025@icaimh.org</a>.
+          </p>
+        </div>
+        <?php
+        renderCfpCard('Publication Cost', ob_get_clean());
+        ?>
+
+        <?php
+        // Iniciar el buffering de salida
+        ob_start();
+        ?>
         <div class="row">
           <div class="col-md-4 mb-3">
             <div class="card h-100 border-primary">
