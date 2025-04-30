@@ -607,7 +607,8 @@
             <div class="card h-100 border-primary">
               <div class="card-body text-center">
                 <h3 class="h5">Submission Deadline</h3>
-                <p class="h4 text-primary">May 2, 2025</p>
+                <p class="h5 text-primary" style="text-decoration: line-through;">May 2, 2025</p>
+                <p class="h4 text-primary">May 9, 2025</p>
               </div>
             </div>
           </div>
@@ -615,7 +616,8 @@
             <div class="card h-100 border-primary">
               <div class="card-body text-center">
                 <h3 class="h5">Notification of Acceptance</h3>
-                <p class="h4 text-primary">May 16, 2025</p>
+                <p class="h5 text-primary" style="text-decoration: line-through;">May 16, 2025</p>
+                <p class="h4 text-primary">May 23, 2025</p>
               </div>
             </div>
           </div>
@@ -623,7 +625,8 @@
             <div class="card h-100 border-primary">
               <div class="card-body text-center">
                 <h3 class="h5">Camera-Ready Submission</h3>
-                <p class="h4 text-primary">June 2, 2025</p>
+                <p class="h5 text-primary " style="text-decoration-line: line-through;">June 2, 2025</p>
+                <p class="h4 text-primary">June 9, 2025</p>
               </div>
             </div>
           </div>
