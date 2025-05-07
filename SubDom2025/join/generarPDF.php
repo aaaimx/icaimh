@@ -34,17 +34,10 @@ class SimpleVoucherPDF extends FPDF
     $this->SetFont('Arial', 'B', 12);
     $this->Cell(0, 10, 'Datos Bancarios Transferencias Nacionales (MXN)', 0, 1);
     $this->SetFont('Arial', '', 10);
-    $this->Cell(0, 8, 'Banco: CITIBANAMEX', 0, 1);
-    $this->Cell(0, 8, 'No. de Cuenta: 8098363741', 0, 1);
-    $this->Cell(0, 8, 'CLABE: 002790701123141039', 0, 1);
-    $this->Cell(0, 8, 'Nombre de Cuenta: JARKOL TECHNOLOGIES S.A. DE C.V.', 0, 1);
-    $this->Ln(10);
-    $this->SetFont('Arial', 'B', 12);
-    $this->Cell(0, 10, 'International Wire Transfers in USD', 0, 1);
-    $this->SetFont('Arial', '', 10);
-    $this->Cell(0, 8, 'Bank: CITIBANAMEX', 0, 1);
-    $this->Cell(0, 8, 'Account Number: 0640 9400254', 0, 1);
-    $this->Cell(0, 8, 'SWIFT Code: BNMXMXMM', 0, 1);
+    $this->Cell(0, 8, 'Banco: BANORTE', 0, 1);
+    $this->Cell(0, 8, 'No. de Cuenta: 1249593571', 0, 1);
+    $this->Cell(0, 8, 'CLABE: 072 910 012495935715', 0, 1);
+    $this->Cell(0, 8, 'Nombre de Cuenta: Estrategia los 7 Merengues S.A. DE C.V.', 0, 1);
   }
 
   function AddProductTable($products)
