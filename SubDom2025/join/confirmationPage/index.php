@@ -32,16 +32,16 @@ if (isset($_GET['token'])) {
         $conn->rollback(); // Es mejor hacer rollback si no hubo cambios
         $conn->close();
         // Mensaje genérico para otros errores
-        $errorMesage = "Token no encontrado o ya estaba pagado.";
-        $suggestion = "Consulte con el administrador.";
+        $errorMesage = "Token not found or already paid.";
+        $suggestion = "Please contact the administrator.";
         header("Location: ../error/?error_message=" . urlencode($errorMesage) . "&suggestion=" . urlencode($suggestion));
         exit();
       }
     } catch (Exception $e) {
       $conn->rollback();
       // Mensaje genérico para otros errores
-      $errorMesage = "Ocurrió un error al procesar tu solicitud.";
-      $suggestion = "Inténtalo de nuevo más tarde.";
+      $errorMesage = "An error occurred while processing your request.";
+      $suggestion = "Please try again later.";
       header("Location: ../error/?error_message=" . urlencode($errorMesage) . "&suggestion=" . urlencode($suggestion));
       exit();
     }
@@ -173,7 +173,10 @@ if (isset($_GET['token'])) {
           <div class="next-steps text-start">
             <h4><i class="bi bi-arrow-right-circle me-2"></i>Next Steps:</h4>
             <ul class="text-start">
-              <li>Download your registration details using the button below</li>
+              <li>Download your registration details using the button below or check your email.</li>
+              <li>Complete your payment and send the receipt to <a href="mailto:icaimh2025@icaimh.org">icaimh2025@icaimh.org</a>.</li>
+              <li>If you require an invoice, please contact us at <a href="mailto:icaimh2025@icaimh.org">icaimh2025@icaimh.org</a>.</li>
+              <li>After paying and sending your receipt, await a payment confirmation email.</li>
               <li>Mark July 2-3, 2025 on your calendar</li>
               <li>Follow us on social media for updates about the conference</li>
             </ul>

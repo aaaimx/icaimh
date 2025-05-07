@@ -195,8 +195,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           if (strpos($stmt->error, 'Duplicate entry') !== false) {
             preg_match("/for key '(.+?)'/", $stmt->error, $matches);
             $campo = $matches[1] ?? 'algún campo único';
-            $errorMesage = "El valor que intentas registrar para $campo ya existe en nuestro sistema.";
-            $suggestion = "Utiliza un valor diferente.";
+            $errorMesage = "The value you entered for $campo already exists in our system.";
+            $suggestion = "Please use a different value.";
             $stmt->close();
             $conn->rollback();
             header("Location: error/?error_message=" . urlencode($errorMesage) . "&suggestion=" . urlencode($suggestion));
@@ -226,8 +226,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       // ========== Manejo de errores genéricos ==========
       error:
       $conn->rollback();
-      $errorMesage = "Ocurrió un error al procesar tu solicitud.";
-      $suggestion = "Inténtalo de nuevo más tarde.";
+      $errorMesage = "An error occurred while processing your request.";
+      $suggestion = "Please try again later.";
       header("Location: error/?error_message=" . urlencode($errorMesage) . "&suggestion=" . urlencode($suggestion));
       exit();
     } catch (mysqli_sql_exception $e) {
@@ -236,11 +236,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       if (strpos($e->getMessage(), 'Duplicate entry') !== false) {
         preg_match("/for key '(.+?)'/", $e->getMessage(), $matches);
         $campo = $matches[1] ?? 'un campo único';
-        $errorMesage = "El valor que intentas registrar para $campo ya existe en nuestro sistema.";
-        $suggestion = "Por favor, utiliza un valor diferente o verifica que no te hayas registrado previamente.";
+        $errorMesage = "The value you entered for $campo already exists in our system.";
+        $suggestion = "Please use a different value.";
       } else {
-        $errorMesage = "Ocurrió un error al procesar tu registro.";
-        $suggestion = "Por favor, inténtalo de nuevo más tarde.";
+        $errorMesage = "An error occurred while processing your request.";
+        $suggestion = "Please try again later.";
       }
 
       header("Location: error/?error_message=" . urlencode($errorMesage) . "&suggestion=" . urlencode($suggestion));
@@ -248,15 +248,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } catch (Exception $e) {
       $conn->rollback();
 
-      $errorMesage = "Error interno: " . $e->getMessage();
-      $suggestion = "Por favor, revisa los datos ingresados o contáctanos si el problema persiste.";
+      $errorMesage = "Internal error: " . $e->getMessage();
+      $suggestion = "Please double-check your information. Need help? Contact us if the issue remains.";
 
       header("Location: error/?error_message=" . urlencode($errorMesage) . "&suggestion=" . urlencode($suggestion));
       exit();
     }
   } else {
-    $errorMesage = "Error en el Registro.";
-    $suggestion = "Complete todos los campos correctamente.";
+    $errorMesage = "Registration Failed.";
+    $suggestion = "Complete all fields properly.";
     header("Location: error/?error_message=" . urlencode($errorMesage) . "&suggestion=" . urlencode($suggestion));
     exit();
   }

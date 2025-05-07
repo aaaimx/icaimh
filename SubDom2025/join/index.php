@@ -104,6 +104,8 @@
                   <button type="submit" class="btn btn-success mt-3">Submit Registration</button>
                 </form>
               </div>
+
+              <p class="text-danger mt-2">If you require an invoice, please contact us by email after finishing the registration process.</p>
             </div>
           </div>
         </div>
