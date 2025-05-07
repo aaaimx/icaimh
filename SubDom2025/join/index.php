@@ -105,8 +105,8 @@
                 </form>
               </div>
 
-              <p class="text-danger mt-2">If you require an invoice, please contact us by email after finishing the registration process.</p>
             </div>
+            <p class="text-danger mt-2">If you require an invoice, please contact us by email after finishing the registration process.</p>
           </div>
         </div>
       </div>
