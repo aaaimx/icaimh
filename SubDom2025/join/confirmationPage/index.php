@@ -21,9 +21,111 @@ if (isset($_GET['token'])) {
       if ($stmt->affected_rows > 0) {
         // La actualización fue exitosa (se cambió al menos una fila)
         $stmt->close();
+
+        // Segunda consulta: obtener participantes
+        $stmt = $conn->prepare("
+          SELECT P.first_name, P.last_name, P.email 
+          FROM Participants P
+          JOIN Participants_Order PO ON P.participant_id = PO.participant_id
+          WHERE PO.order_id = ?
+        ");
+        $stmt->bind_param("s", $order_id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        // Procesar los resultados de los participantes
+        $participants = []; // array principal
+
+        while ($row = $result->fetch_assoc()) {
+          $participants[] = [
+            'name' => $row['first_name'] . ' ' . $row['last_name'],
+            'email' => $row['email']
+          ];
+        }
+
+        $stmt->close();
+        // $conn->close();
         $conn->commit();
         $conn->close();
         $buttonBool = false;
+
+        // Ahora puedes iterar así:
+        foreach ($participants as $participant) {
+          // Mensaje HTML sin el boton de confirmación
+          $messageUser = '
+            <html>
+              <head>
+                <title>ICAIMH 2025 Confirmation</title>
+                <style>
+                  .button {
+                    background-color: #4caf50;
+                    border: none;
+                    color: white;
+                    padding: 15px 32px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 16px;
+                    margin: 20px 0;
+                    cursor: pointer;
+                    border-radius: 5px;
+                  }
+                  .pdf-button {
+                    display: inline-block;
+                    background-color: #106eea;
+                    color: white;
+                    padding: 12px 25px;
+                    border-radius: 5px;
+                    text-decoration: none;
+                    font-weight: 600;
+                    transition: all 0.3s ease;
+                    margin-top: 20px;
+                  }
+
+                  .pdf-button:hover {
+                    background-color: #0e5ec7;
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 10px rgba(16, 110, 234, 0.3);
+                  }
+                </style>
+              </head>
+              <body>
+              
+                <p>' . htmlspecialchars($participant['name']) . ',</p>
+                <p>Congratulations! You have successfully completed your registration for ICAIMH 2025.</p>
+                <p>Find attached the confirmation document, it is necessary to present it when entering the ICAIMH 2025 conference.</p>
+
+                <hr>
+
+                <p>
+                  Felicidades! Has completado con exito tu registro para ICAIMH 2025.
+                </p>
+
+                <p>
+                  Encuentre adjunto el documento de confirmación, es necesario presentarlo al entrar al congreso ICAIMH 2025.
+                </p>
+
+
+                <a
+                  href="https://2025.icaimh.org/join/generarPDFEntrada.php?order_id=' . htmlspecialchars($order_id) . '"
+                  target="_blank"
+                  class="button"
+                  >See Confirmation</a
+                >
+
+                <p>Order ID: ' . htmlspecialchars($order_id) . '</p>
+              </body>
+            </html>
+          ';
+          $subject = 'ICAIMH 2025 Registration Invoice';
+          // Cabeceras para correo HTML
+          $headers = "From: icaimh2025@icaimh.org\r\n";
+          $headers .= "MIME-Version: 1.0\r\n";
+          $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+          $mailUser = mail($participant['email'], $subject, $messageUser, $headers);
+        }
+
+
         // header("Location: confirmationPage/?order_id=" . urlencode($order_id) . "&button_bool=false");
         // exit();
       } else {
@@ -175,11 +277,12 @@ if (isset($_GET['token'])) {
             <ul class="text-start">
               <li>Download your registration details using the button below or check your email.</li>
               <li>Complete your payment and send the receipt to <a href="mailto:icaimh2025@icaimh.org">icaimh2025@icaimh.org</a>.</li>
-              <li>If you require an invoice, please contact us at <a href="mailto:icaimh2025@icaimh.org">icaimh2025@icaimh.org</a>.</li>
               <li>After paying and sending your receipt, await a payment confirmation email.</li>
               <li>Mark July 2-3, 2025 on your calendar</li>
               <li>Follow us on social media for updates about the conference</li>
             </ul>
+            <p class="text-danger mt-4 text-center">If you require an invoice, please contact us at <a href="mailto:icaimh2025@icaimh.org">icaimh2025@icaimh.org</a>.</p>
+
           </div>
           <a href="../generarPDF.php?order_id=<?php echo htmlspecialchars($order_id, ENT_QUOTES, 'UTF-8'); ?>" class="pdf-button" target="_blank">
             <i class="bi bi-file-earmark-pdf me-2"></i> View/Download Registration PDF
@@ -206,7 +309,7 @@ if (isset($_GET['token'])) {
   ?>
 
   <a
-    href="/#"
+    href="./#"
     class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
