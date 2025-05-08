@@ -154,10 +154,18 @@
             <li><?php echo htmlspecialchars($suggestion, ENT_QUOTES, 'UTF-8'); ?></li>
           </ul>
         </div>
-
-        <a href="../index.php" onclick="event.preventDefault(); history.back();" class="return-button">
-          <i class="bi bi-house-door me-2"></i> Return to Registration
-        </a>
+        <?php
+        if ($errorMessage == "Can't register more than 10 participants at once.") { ?>
+          <a href="../index.php" class="return-button">
+            <i class="bi bi-house-door me-2"></i> Return to Registration
+          </a>
+        <?php
+        } else {
+        ?>
+          <a href="../index.php" onclick="event.preventDefault(); history.back();" class="return-button">
+            <i class="bi bi-house-door me-2"></i> Return to Registration
+          </a>
+        <?php } ?>
       </div>
 
       <p>If you continue to experience issues, please contact us at <a href="mailto:icaimh2025@icaimh.org">icaimh2025@icaimh.org</a></p>
