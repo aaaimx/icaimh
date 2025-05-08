@@ -198,28 +198,25 @@ if ($resultActivationToken->num_rows === 0) {
 			<p>Please, find attached your registration invoice for ICAIMH 2025.</p>
 
 			<p>
-				Registration will not be confirmed until we receive the bank transfer.
+				Registration will not be confirmed until we receive the bank transfer. Transfer details are listed in the attached PDF file.
 			</p>
 
 			<p>
-				To ease the confirmation process, please send the transfer references to:
-				<a href="mailto:icaimh2025@icaimh.org">icaimh2025@icaimh.org</a>
+				To ease the confirmation process, please send the transfer references to: <a href="mailto:icaimh2025@icaimh.org">icaimh2025@icaimh.org</a>, with the subject "Pago ' . htmlspecialchars($order_id) . '".
+			</p>
+
+			<hr>
+
+			<p>
+				Encuentre adjunto la factura de registro para el congreso ICAIMH 2025.
 			</p>
 
 			<p>
-				Encuentre adjunto la factura de registro para el congreso
-				<a href="mailto:icaimh2025@icaimh.org">icaimh2025@icaimh.org</a>.
+				El registro no estará confirmado hasta que se reciba la transferencia bancaria. Los datos para realizar la transferencia se encuentran en el PDF adjunto.
 			</p>
 
 			<p>
-				El registro no estará completo hasta que se reciba la transferencia
-				bancaria.
-			</p>
-
-			<p>
-				Para agilizar el proceso de confirmación, le rogamos envíe los datos de la
-				transferencia realizada a:
-				<a href="mailto:icaimh2025@icaimh.org">icaimh2025@icaimh.org</a>
+				Para agilizar el proceso de confirmación, por favor envíe los datos de la transferencia realizada a: <a href="mailto:icaimh2025@icaimh.org">icaimh2025@icaimh.org</a>, con el asunto "Pago ' . htmlspecialchars($order_id) . '"
 			</p>
 
 			<a
