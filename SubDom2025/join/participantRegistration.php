@@ -270,21 +270,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $conn->close();
 
 // Función para generar UUID (para MySQL)
-function generateUuid()
+// function generateUuid()
+// {
+//   return sprintf(
+//     '%04x%04x-%04x-%04x-%04x-%04x%04x%04x',
+//     mt_rand(0, 0xffff),
+//     mt_rand(0, 0xffff),
+//     mt_rand(0, 0xffff),
+//     mt_rand(0, 0x0fff) | 0x4000,
+//     mt_rand(0, 0x3fff) | 0x8000,
+//     mt_rand(0, 0xffff),
+//     mt_rand(0, 0xffff),
+//     mt_rand(0, 0xffff)
+//   );
+// }
+function generateUuid($length = 5)
 {
-  return sprintf(
-    '%04x%04x-%04x-%04x-%04x-%04x%04x%04x',
-    mt_rand(0, 0xffff),
-    mt_rand(0, 0xffff),
-    mt_rand(0, 0xffff),
-    mt_rand(0, 0x0fff) | 0x4000,
-    mt_rand(0, 0x3fff) | 0x8000,
-    mt_rand(0, 0xffff),
-    mt_rand(0, 0xffff),
-    mt_rand(0, 0xffff)
-  );
+  $max = pow(36, $length) - 1;
+  $random = mt_rand(0, $max);
+  return str_pad(base_convert($random, 10, 36), $length, '0', STR_PAD_LEFT);
 }
-
 
 function validateEmail($email)
 {
