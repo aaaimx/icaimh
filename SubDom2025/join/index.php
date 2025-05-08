@@ -150,13 +150,32 @@
       // Enviar el número de participantes al servidor usando AJAX o directamente en PHP
       fetch(`/join/dataFormComponent.php?numParticipants=${numPersonas}`)
         .then(response => response.text())
+        //   .then(html => {
+        //     if (html === 'Error') {
+        //       const errorMesage = "Can't register more than 10 participants at once.";
+        //       const suggestion = "Change the number of participants.";
+        //       window.location.href = '/error/?error_message=' + encodeURIComponent(errorMesage) + "&suggestion=" + encodeURIComponent(suggestion);
+        //     } else {
+        //       document.getElementById("participantForms").innerHTML = html;
+        //     }
+        //   })
+        //   .finally(() => {
+        //     // Hide number selection, show participant forms
+        //     participantNumberSelection.style.display = 'none';
+        //     participantFormsContainer.style.display = 'block';
+        //   })
+        //   .catch(error => console.error("Error:", error));
         .then(html => {
-          document.getElementById("participantForms").innerHTML = html;
-        })
-        .finally(() => {
-          // Hide number selection, show participant forms
-          participantNumberSelection.style.display = 'none';
-          participantFormsContainer.style.display = 'block';
+          if (html === 'Error') {
+            const errorMessage = "Can't register more than 10 participants at once.";
+            const suggestion = "Change the number of participants.";
+            window.location.href = 'error/?error_message=' + encodeURIComponent(errorMessage) + "&suggestion=" + encodeURIComponent(suggestion);
+            return; // <-- 🔴 DETIENE la ejecución de este then
+          } else {
+            document.getElementById("participantForms").innerHTML = html;
+            participantNumberSelection.style.display = 'none';
+            participantFormsContainer.style.display = 'block';
+          }
         })
         .catch(error => console.error("Error:", error));
     }

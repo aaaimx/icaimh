@@ -38,7 +38,12 @@ if (isset($_GET['numParticipants']) && $_GET['numParticipants'] > 0 && $_GET['nu
   $conn->close();
 } else {
   // recargar la página
-  header("Location: .");
+  // header("Location: .");
+  // exit();
+  echo "Error";
+  // $errorMesage = "Can't register more than 10 participants at once.";
+  // $suggestion = "Change the number of participants.";
+  // header("Location: error/?error_message=" . urlencode($errorMesage) . "&suggestion=" . urlencode($suggestion));
   exit();
 }
 
