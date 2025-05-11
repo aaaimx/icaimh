@@ -1,6 +1,6 @@
 <!-- ======= Start Pogram Chairs Section ======= -->
 <section
-  id="organizers"
+  id="pChairs"
   class="p-5 text-center"
   style="max-width: 1300px; margin: auto">
   <h1 class="d-inline-block">PROGRAM CHAIRS</h1>

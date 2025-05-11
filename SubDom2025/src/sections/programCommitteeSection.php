@@ -1,5 +1,5 @@
 <!-- Start Committee Section -->
-<section class="p-5 text-center" style="max-width: 1300px; margin: auto">
+<section class="p-5 text-center" style="max-width: 1300px; margin: auto" id="pCommittee">
   <h1 class="d-inline-block">PROGRAM COMMITTEE</h1>
   <br />
   <h5 class="d-inline-block testimonial3">(Tentative)</h5>
