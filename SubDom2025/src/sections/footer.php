@@ -1,3 +1,13 @@
+<style>
+  .footer-bottom {
+    background-color: #d16300;
+    /* o el color que tenga tu página */
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+  }
+</style>
 <footer id="footer">
   <div class="footer-top">
     <div class="container">
@@ -63,4 +73,9 @@
       </div>
     </div>
   </div>
+
+  <div class="footer-bottom" style="color: #1d1d1d;">
+    Developed by <a style="font-weight: bold; text-decoration: none; color: #1d1d1d;" href="https://www.linkedin.com/in/angel-aldaz/" target="_blank">Ángel Daniel Aldaz-Carrillo</a>
+  </div>
+
 </footer>
