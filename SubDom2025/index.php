@@ -75,7 +75,7 @@
     ?>
 
     <?php
-    // CardComponentPreparation for committees and program chairs
+    // CardComponentPreparation for committees, program chairs and staff
     include('src/components/committeeCardComponent.php');
     ?>
 
@@ -89,6 +89,10 @@
 
     <?php
     include("src/sections/institutionsSection.php")
+    ?>
+
+    <?php
+    include('src/sections/staffSection.php');
     ?>
 
     <?php
