@@ -12,7 +12,7 @@
         <!-- Slide 1 -->
         <div
           class="carousel-item active"
-          style="background-image: url(public/img/icaimh/img4.jpg)">
+          style="background-image: url(public/img/icaimh/img5.png)">
           <div class="carousel-container">
             <div class="carousel-content">
               <h2 class="animate__animated animate__fadeInDown">

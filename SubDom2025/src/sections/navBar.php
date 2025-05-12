@@ -1,17 +1,17 @@
 <style>
   /* Estilo general del dropdown */
   .navbar .dropdown-menu {
-    background-color: #cc5c00 !important;
+    background-color: #d16300 !important;
     border: none;
     border-radius: 0;
     margin: 0;
     padding: 0;
-    box-shadow: none;
+    box-shadow: none !important;
   }
 
   /* Elementos individuales del menú */
   .navbar .dropdown-menu .dropdown-item {
-    background-color: #cc5c00;
+    background-color: #d16300;
     color: white;
     padding: 10px 20px;
     font-weight: 500;
