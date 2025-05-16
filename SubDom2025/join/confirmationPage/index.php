@@ -54,67 +54,111 @@ if (isset($_GET['token'])) {
           // Mensaje HTML sin el boton de confirmación
           $messageUser = '
             <html>
-              <head>
-                <title>ICAIMH 2025 Confirmation</title>
-                <style>
-                  .button {
-                    background-color: #4caf50;
-                    border: none;
-                    color: white;
-                    padding: 15px 32px;
-                    text-align: center;
-                    text-decoration: none;
-                    display: inline-block;
-                    font-size: 16px;
-                    margin: 20px 0;
-                    cursor: pointer;
-                    border-radius: 5px;
-                  }
-                  .pdf-button {
-                    display: inline-block;
-                    background-color: #106eea;
-                    color: white;
-                    padding: 12px 25px;
-                    border-radius: 5px;
-                    text-decoration: none;
-                    font-weight: 600;
-                    transition: all 0.3s ease;
-                    margin-top: 20px;
-                  }
+            <head>
+              <title>ICAIMH 2025 Confirmation</title>
+              <style>
+                .button {
+                  background-color: #4caf50;
+                  border: none;
+                  color: white;
+                  padding: 15px 32px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 16px;
+                  margin: 20px 0;
+                  cursor: pointer;
+                  border-radius: 5px;
+                }
 
-                  .pdf-button:hover {
-                    background-color: #0e5ec7;
-                    transform: translateY(-2px);
-                    box-shadow: 0 4px 10px rgba(16, 110, 234, 0.3);
-                  }
-                </style>
-              </head>
-              <body>
-              
-                <p>' . htmlspecialchars($participant['name']) . ',</p>
-                <p>Congratulations! You have successfully completed your registration for ICAIMH 2025.</p>
-                <p>Find attached the confirmation document, it is necessary to present it when entering the ICAIMH 2025 conference.</p>
+                .pdf-button {
+                  display: inline-block;
+                  background-color: #106eea;
+                  color: white;
+                  padding: 12px 25px;
+                  border-radius: 5px;
+                  text-decoration: none;
+                  font-weight: 600;
+                  transition: all 0.3s ease;
+                  margin-top: 20px;
+                }
 
-                <hr>
+                .pdf-button:hover {
+                  background-color: #0e5ec7;
+                  transform: translateY(-2px);
+                  box-shadow: 0 4px 10px rgba(16, 110, 234, 0.3);
+                }
+              </style>
+            </head>
 
-                <p>
-                  Felicidades! Has completado con exito tu registro para ICAIMH 2025.
-                </p>
+            <body>
+              <p>' . htmlspecialchars($participant['name']) . ',</p>
+              <p>
+                Congratulations! You have successfully completed your registration for
+                ICAIMH 2025.
+              </p>
+              <p>
+                Find attached the confirmation document, it is necessary to present it
+                when entering the ICAIMH 2025 conference.
+              </p>
+              <p>
+                <b>Important:</b> All attendees must print and present the PDF file
+                received in the payment confirmation email upon arrival at the event. This
+                file includes the registration ID and the participant ID, and is required
+                for check-in.
+              </p>
+              <p>
+                Please note that the confirmation file is individual and non-transferable.
+                If multiple people were registered in a single order, all registered
+                attendees will receive the same email containing a single PDF file. This
+                PDF includes a separate page for each attendee, each with their
+                corresponding participant ID. Each attendee must print and present
+                <b>their own page</b> from the document to enter the event.
+              </p>
+              <p>
+                Attendees who selected the Student rate will be required to present a
+                valid student ID during the on-site registration process. Failure to do so
+                may result in a fee adjustment to the general public rate.
+              </p>
 
-                <p>
-                  Encuentre adjunto el documento de confirmación, es necesario presentarlo al entrar al congreso ICAIMH 2025.
-                </p>
+              <hr />
 
+              <p>
+                ¡Felicidades! Has completado exitosamente tu registro para ICAIMH 2025.
+              </p>
+              <p>
+                Adjunto encontrarás el documento de confirmación, el cual es necesario
+                presentar al ingresar a la conferencia ICAIMH 2025.
+              </p>
+              <p>
+                <b>Importante:</b> Todos los asistentes deben imprimir y presentar el
+                archivo PDF recibido en el correo de confirmación de pago al llegar al
+                evento. Este archivo incluye el ID de registro y el ID de participante, y
+                es requerido para ingresar al evento.
+              </p>
+              <p>
+                Ten en cuenta que el archivo de confirmación es individual e
+                intransferible. Si se registraron varias personas en una sola orden, todos
+                los asistentes registrados recibirán el mismo correo con un único archivo
+                PDF. Este PDF incluye una página separada para cada asistente, cada una
+                con su correspondiente ID de participante. Cada asistente debe imprimir y
+                presentar <b>su propia página</b> del documento para poder ingresar al
+                evento.
+              </p>
+              <p>
+                Los asistentes que hayan seleccionado la tarifa de Estudiante deberán
+                presentar una credencial vigente que los acredite como estudiantes durante
+                el ingreso al evento. En caso de no hacerlo, se podrá aplicar
+                un ajuste de tarifa a la tarifa de público general.
+              </p>
+              <p>Si requiere factura fiscal mexicana, por favor envíe un correo electrónico a <a href="mailto:hola@brainhouse.mx" class="text-decoration-none">hola@brainhouse.mx</a> después de completar su registro. Es indispensable adjuntar su Constancia de Situación Fiscal actualizada para poder emitir la factura correctamente.</p>
+              <a
+                href="https://2025.icaimh.org/join/generarPDFEntrada.php?order_id=' . htmlspecialchars($order_id) . '"
+                target="_blank"
+                class="button">See Confirmation</a>
+              <p>Order ID: ' . htmlspecialchars($order_id) . '</p>
+            </body>
 
-                <a
-                  href="https://2025.icaimh.org/join/generarPDFEntrada.php?order_id=' . htmlspecialchars($order_id) . '"
-                  target="_blank"
-                  class="button"
-                  >See Confirmation</a
-                >
-
-                <p>Order ID: ' . htmlspecialchars($order_id) . '</p>
-              </body>
             </html>
           ';
           $subject = 'ICAIMH 2025 Registration Invoice';
