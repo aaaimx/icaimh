@@ -85,7 +85,7 @@ function renderForm($numParticipantes, $roles)
               <option value="" selected disabled>Select an option</option>
               <?php foreach ($roles as $role) { ?>
                 <option value="<?php echo htmlspecialchars($role['rol_id']); ?>">
-                  <?php echo htmlspecialchars($role['rol_name'] . ' - $' . number_format($role['price'], 2)); ?>
+                  <?php echo htmlspecialchars($role['rol_name'] . ' - $' . number_format($role['price'], 2) . ' MXN'); ?>
                 </option>
               <?php } ?>
             </select>
