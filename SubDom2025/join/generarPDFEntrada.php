@@ -77,7 +77,7 @@ class SimpleVoucherPDF extends FPDF
     $this->Cell(0, 10, 'ICAIMH 2025 - https://2025.icaimh.org/ - Page ' . $this->PageNo(), 0, 0, 'C');
   }
 
-  function AddStaticInfo($order_id, $participant_id, $participant_name)
+  function AddStaticInfo($order_id, $participant_id, $participant_name, $role, $price)
   {
     $this->Ln(10);
 
@@ -88,7 +88,7 @@ class SimpleVoucherPDF extends FPDF
 
     $this->SetFont('Arial', '', 14);
     $this->SetTextColor(0);
-    $this->Cell(0, 10, utf8_decode('Tu pago ha sido confirmado exitosamente.'), 0, 1, 'C');
+    $this->Cell(0, 10, utf8_decode('Hemos confirmado exitosamente tu pago de $' . htmlspecialchars($price) . ' correspondiente al rol de ' . htmlspecialchars($role) . '.'), 0, 1, 'C');
 
     $this->Ln(8);
 
@@ -116,9 +116,10 @@ if (!$conn->connect_error) {
 
 
   $stmt = $conn->prepare("
-      SELECT P.participant_id, P.first_name, P.last_name, P.email
+      SELECT P.participant_id, P.first_name, P.last_name, P.email, R.rol_name, R.price
       FROM Participants P
       JOIN Participants_Order PO ON P.participant_id = PO.participant_id
+      JOIN Roles R ON P.rol_id = R.rol_id
       JOIN Orders O ON PO.order_id = O.order_id
       WHERE PO.order_id = ? AND O.paid = 1;
   ");
@@ -132,7 +133,9 @@ if (!$conn->connect_error) {
     $participants[] = [
       'id' => $row['participant_id'],
       'name' => $row['first_name'] . ' ' . $row['last_name'],
-      'email' => $row['email']
+      'email' => $row['email'],
+      'rol' => $row['rol_name'],
+      'price' => $row['price']
     ];
   }
 
@@ -148,7 +151,7 @@ if ($result->num_rows === 0) {
   $pdf = new SimpleVoucherPDF();
   foreach ($participants as $participant) {
     $pdf->AddPage();
-    $pdf->AddStaticInfo($order_id, $participant['id'], $participant['name']);
+    $pdf->AddStaticInfo($order_id, $participant['id'], $participant['name'], $participant['rol'], $participant['price']);
   }
   // $pdf->AddPage();
   // $pdf->AddStaticInfo($order_id);
