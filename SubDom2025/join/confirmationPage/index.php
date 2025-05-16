@@ -216,7 +216,7 @@ if (isset($_GET['token'])) {
       background-color: #f8f9fa;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 30px;
+      padding: 10px 30px 30px 30px;
       margin-top: 20px;
       margin-bottom: 30px;
     }
@@ -263,26 +263,55 @@ if (isset($_GET['token'])) {
   <main id="main">
     <!-- Sección de registro con confirmación mejorada -->
     <section id="registration" class="px-2 text-center" style="max-width: 800px; margin: auto">
-      <h1 class="mb-4">ICAIMH 2025 REGISTRATION</h1>
+      <h1 class="mb-2">ICAIMH 2025 REGISTRATION</h1>
       <p>Your registration ID: <?php echo htmlspecialchars($order_id, ENT_QUOTES, 'UTF-8'); ?></p>
       <div class="registration-card animate__animated animate__fadeIn">
         <?php
         if ($buttonBool === true) {
         ?>
-          <i class="bi bi-check-circle-fill confirmation-icon"></i>
+          <i class="bi bi-check-circle-fill confirmation-icon  "></i>
           <h2 class="mb-3">Thank you for registering!</h2>
           <p class="lead mb-4">Your registration for the International Conference on Artificial Intelligence in Mental Health 2025 has been successfully completed.</p>
           <div class="next-steps text-start">
-            <h4><i class="bi bi-arrow-right-circle me-2"></i>Next Steps:</h4>
-            <ul class="text-start">
-              <li>Download your registration details using the button below or check your email.</li>
-              <li>Complete your payment and send the receipt to <a href="mailto:icaimh2025@icaimh.org">icaimh2025@icaimh.org</a>.</li>
-              <li>After paying and sending your receipt, await a payment confirmation email.</li>
-              <li>Mark July 2-3, 2025 on your calendar</li>
-              <li>Follow us on social media for updates about the conference</li>
+            <h4 class="d-flex align-items-center mb-3 ">
+              <i class="bi bi-list-task me-2"></i>Next Steps:
+            </h4>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item bg-transparent d-flex align-items-start py-2">
+                <i class="bi bi-download  me-3 mt-1"></i>
+                <span>Download your registration details using the button below, or check your email (including the spam folder).</span>
+              </li>
+              <li class="list-group-item bg-transparent d-flex align-items-start py-2">
+                <i class="bi bi-envelope-check  me-3 mt-1"></i>
+                <span>Complete your payment and send the receipt to <a href="mailto:icaimh2025@icaimh.org" class="text-decoration-none">icaimh2025@icaimh.org</a>.</span>
+              </li>
+              <li class="list-group-item bg-transparent d-flex align-items-start py-2">
+                <i class="bi bi-hourglass-split  me-3 mt-1"></i>
+                <span>After paying and sending your receipt, await a payment confirmation email.</span>
+              </li>
+              <li class="list-group-item bg-transparent d-flex align-items-start py-2">
+                <i class="bi bi-calendar-check  me-3 mt-1"></i>
+                <span>Mark July 2-3, 2025 on your calendar</span>
+              </li>
+              <li class="list-group-item bg-transparent d-flex align-items-start py-2">
+                <i class="bi bi-megaphone  me-3 mt-1"></i>
+                <span>Follow us on social media for updates about the conference</span>
+              </li>
+              <li class="list-group-item bg-transparent d-flex align-items-start py-2">
+                <!-- <i class="bi bi-megaphone  me-3 mt-1"></i> -->
+                <i class="fas fa-id-card me-3 mt-1"></i>
+                <span>If you registered as a student, don't forget to bring your student ID—otherwise, the general rate may apply.</span>
+              </li>
             </ul>
-            <p class="text-danger mt-4 text-center">If you require an invoice, please contact us at <a href="mailto:icaimh2025@icaimh.org">icaimh2025@icaimh.org</a>.</p>
 
+            <div class="alert alert-warning rounded-3 mt-4">
+              <div class="d-flex">
+                <i class="bi bi-exclamation-triangle-fill text-warning me-3 fs-4"></i>
+                <div>
+                  <p class="mb-0 text-danger fw-semibold">Si requiere factura fiscal mexicana, por favor envíe un correo electrónico a <a href="mailto:hola@brainhouse.mx" class="text-decoration-none">hola@brainhouse.mx</a> después de completar su registro. Es indispensable adjuntar su Constancia de Situación Fiscal actualizada para poder emitir la factura correctamente.</p>
+                </div>
+              </div>
+            </div>
           </div>
           <a href="../generarPDF.php?order_id=<?php echo htmlspecialchars($order_id, ENT_QUOTES, 'UTF-8'); ?>" class="pdf-button" target="_blank">
             <i class="bi bi-file-earmark-pdf me-2"></i> View/Download Registration PDF
