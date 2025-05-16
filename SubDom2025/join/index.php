@@ -106,10 +106,22 @@
               </div>
 
             </div>
-            <p class="text-danger mt-2">If you require an invoice, please contact us by email after finishing the registration process.</p>
+            <!-- Important Notices Card - More Prominent -->
+            <div style="max-width: 660px; padding: 1rem 0; display: flex; gap: 1rem">
+              <div class="alert alert-danger  mb-0 p-3" style="flex: 1;">
+                <h5 class="alert-heading "><i class="fas fa-id-card fs-4 me-2"></i>Student ID Requirement</h5>
+                <p class="mb-0" style="text-align: justify;">Attendees selecting the Student rate will be required to present a valid student ID during the on-site registration process. Failure to do so may result in a fee adjustment to the general public rate.</p>
+              </div>
+
+              <div class="alert alert-warning  mb-0 p-3" style="flex: 1;">
+                <div>
+                  <h5 class="alert-heading"><i class="fas fa-file-invoice-dollar fs-4 me-3"></i>Factura Fiscal (CFDI)</h5>
+                  <p class="mb-0" style="text-align: justify;">Si requiere factura fiscal mexicana (CFDI), por favor contáctenos por correo electrónico después de haber completado su proceso de registro.</p>
+                </div>
+              </div>
+            </div>
+            <!-- </div> -->
           </div>
-        </div>
-      </div>
     </section>
   </main>
   <!-- End #main -->
