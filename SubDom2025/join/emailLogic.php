@@ -150,7 +150,8 @@ if ($resultActivationToken->num_rows === 0) {
 	$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
 	// Envía el correo
-	$mailAdmin = mail($to, $subject, $messageAdmin, $headers);
+	$fullSubject = $order_id . ' - ' . $subject;
+	$mailAdmin = mail($to, $fullSubject, $messageAdmin, $headers);
 
 	// Ahora puedes iterar así:
 	foreach ($participants as $participant) {
