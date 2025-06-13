@@ -41,5 +41,19 @@ $staff = [
     "title" => "Staff",
     "university" => "Tecnológico Nacional de México/Instituto Tecnológico de Mérida, Mexico.",
     "br" => null
+  ],
+  [
+    "first_name" => "Yuly Brigith",
+    "last_name" => "Ocampo-Valencia",
+    "title" => "Staff",
+    "university" => "Universidad de Cundinamarca. Colombia.",
+    "br" => null
+  ],
+  [
+    "first_name" => "Luis",
+    "last_name" => "Cardeña-Ley",
+    "title" => "Staff",
+    "university" => "Tecnológico Nacional de México/Instituto Tecnológico de Mérida, Mexico.",
+    "br" => null
   ]
 ];
