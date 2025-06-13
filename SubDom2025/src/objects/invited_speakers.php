@@ -16,7 +16,7 @@ $invited_speakers = [
     "img" => "../public/img/speakers/mariana-sologuren-lopez.jpg"
   ],
   [
-    "name" => "Dr. Eduardo Barbará Moralesz",
+    "name" => "Dr. Eduardo Barbará Morales",
     "type" => "Invited Talk",
     "talk_title" => null,
     "info" => "El Dr. Eduardo Barbará Morales es graduado con la medalla al mérito universitario en el Doctorado en Ingeniería Biomédica por la Universidad Autónoma Metropolitana, unidad Iztapalapa (UAM-I), en la ciudad de México. Cuenta con una maestría en el área de Ingeniería Biomédica por la Universidad Tecnológica de la Habana José A. Echeverría y es Ingeniero en Telecomunicaciones y Electrónica por dicha institución.\nEl Dr. Barbará cuenta con más de 15 años de experiencia docente y de investigación en diferentes universidades de Cuba, México y Colombia en el área de ingeniería Biomédica. Ha sido autor de varias publicaciones en revistas internacionales del área biomédica y ha participado en diversos congresos y eventos nacionales e internacionales.\nActualmente es profesor e investigador de tiempo completo en la División de Ingeniería y Ciencias Exactas de la Universidad Anáhuac Mayab. Es miembro del sistema nacional de investigadores (SNI) nivel: candidato a investigador nacional, de la sociedad Mexicana de Ingeniería Biomédica (SOMIB), del registro Estatal de Investigadores del estado de Yucatán (REI) y miembro del comité de investigación de la Universidad Anáhuac Mayab.",
