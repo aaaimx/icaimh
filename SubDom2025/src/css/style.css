@@ -1476,6 +1476,14 @@ section {
   background-color: #d16300;
   color: #fff;
   padding: 10px 100px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease,
+    transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#schedule .nav-tabs a:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
 }
 
 @media (max-width: 991px) {
@@ -1496,10 +1504,51 @@ section {
   }
 }
 
-#schedule .nav-tabs a.active {
+/* #schedule .nav-tabs a.active {
   background-color: #152b79;
+  border: 2px solid #d16300;
   color: #fff;
+} */
+/* Estilo principal del botón activo */
+#schedule .nav-tabs a.active {
+  background-color: #1f3ba8;
+  color: #fff;
+  border-radius: 50px;
+  box-shadow: 0 6px 16px rgba(31, 59, 168, 0.3);
+  /* padding: 10px 100px; */
+  transform: scale(1.03);
+  z-index: 1;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  font-weight: 600;
 }
+
+/* Indicador visual adicional */
+#schedule .nav-tabs a.active::after {
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  opacity: 0.9;
+}
+
+/* Estados de interacción mejorados */
+#schedule .nav-tabs a.active:hover {
+  background-color: #2448c7;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(31, 59, 168, 0.4);
+}
+/* 
+#schedule .nav-tabs a.active:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+} */
 
 #schedule .sub-heading {
   text-align: center;
