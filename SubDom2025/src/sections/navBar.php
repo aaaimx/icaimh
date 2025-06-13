@@ -94,6 +94,18 @@
           </ul>
         </li>
 
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            PROGRAM
+          </a>
+          <ul class="dropdown-menu center-dropdown">
+            <li><a class="dropdown-item no-active" href="/#schedule">SCHEDULE</a></li>
+            <li><a class="dropdown-item no-active" href="/speakers">INVITED SPEAKERS</a></li>
+            <li><a class="dropdown-item no-active" href="/#acceptedpapers">ACCEPTED PAPERS</a></li>
+          </ul>
+        </li>
+
         <li class="nav-item">
           <a class="nav-link" href="/#contact">Contact</a>
         </li>
