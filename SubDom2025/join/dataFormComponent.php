@@ -76,7 +76,7 @@ function renderForm($numParticipantes, $roles)
         </div>
         <div class="row">
           <div class="col-md-6 mb-3">
-            <label for="affiliation<?php echo $i ?>" class="form-label">Affiliation</label>
+            <label for="affiliation<?php echo $i ?>" class="form-label">Affiliation (Institution)</label>
             <input type="text" class="form-control" id="affiliation<?php echo $i ?>" name="affiliation<?php echo $i ?>" required>
           </div>
           <div class="col-md-6 mb-3">
