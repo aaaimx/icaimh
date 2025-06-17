@@ -102,7 +102,7 @@
           <ul class="dropdown-menu center-dropdown">
             <li><a class="dropdown-item no-active" href="/#schedule">SCHEDULE</a></li>
             <li><a class="dropdown-item no-active" href="/speakers">INVITED SPEAKERS</a></li>
-            <li><a class="dropdown-item no-active" href="/#acceptedpapers">ACCEPTED PAPERS</a></li>
+            <li><a class="dropdown-item no-active" href="/accepted-papers">ACCEPTED PAPERS</a></li>
           </ul>
         </li>
 
