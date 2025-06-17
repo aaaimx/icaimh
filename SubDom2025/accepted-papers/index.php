@@ -47,7 +47,6 @@
     type="text/javascript"
     src="https://kit.fontawesome.com/45786511e1.js"
     crossorigin="anonymous"></script>
-  <!-- Estilos personalizados -->
   <link rel="stylesheet" href="../src/css/accepted-papers.css">
 </head>
 
@@ -116,6 +115,18 @@
     href="./#"
     class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  <!-- Vendor JS Files -->
+  <script src="../src/vendor/purecounter/purecounter.js"></script>
+  <script src="../src/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../src/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../src/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../src/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../src/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../src/js/main.js"></script>
+  <script src="../src/js/main2.js"></script>
+  <script src="../src/js/main3.js"></script>
 
 </body>
 
