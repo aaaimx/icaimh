@@ -1803,7 +1803,7 @@ section {
 # Gallery Section
 --------------------------------------------------------------*/
 #gallery {
-  padding: 60px;
+  padding: 0px 60px;
   overflow: hidden;
 }
 
@@ -1840,5 +1840,10 @@ section {
     z-index: 1;
     transform: scale(1.15);
     margin-top: 6px;
+  }
+}
+@media (max-width: 768px) {
+  #gallery {
+    padding: 5px 20px;
   }
 }

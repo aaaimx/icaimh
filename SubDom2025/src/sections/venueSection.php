@@ -34,6 +34,7 @@
       <source src="" type="video/webm" />
     </video>
   </div>
+  <img src="public/img/icaimh/mapa-anahuac.png" class="img-fluid" alt="Mapa Anahuac">
 </section>
 
 <!--End Galeria 2022-->
