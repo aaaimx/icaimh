@@ -1,5 +1,6 @@
 <?php
-if (isset($_GET['numParticipants']) && $_GET['numParticipants'] > 0 && $_GET['numParticipants'] <= 10) {
+include("../config.php");
+if (isset($_GET['numParticipants']) && $_GET['numParticipants'] > 0 && $_GET['numParticipants'] <= 10 && $registration_open) {
   include("../src/db/db.php");
   // Verificar conexión
   if ($conn->connect_error) {
@@ -40,7 +41,11 @@ if (isset($_GET['numParticipants']) && $_GET['numParticipants'] > 0 && $_GET['nu
   // recargar la página
   // header("Location: .");
   // exit();
-  echo "Error";
+  if ($registration_open) {
+    echo "Error";
+  } else {
+    header("Location: .");
+  }
   // $errorMesage = "Can't register more than 10 participants at once.";
   // $suggestion = "Change the number of participants.";
   // header("Location: error/?error_message=" . urlencode($errorMesage) . "&suggestion=" . urlencode($suggestion));
