@@ -64,64 +64,80 @@
 
 <body>
   <?php
-  include("../src/sections/navBar.php")
+  include("../src/sections/navBar.php");
+  include("../config.php");
   ?>
 
   <main id="main">
     <section id="registration" class="px-2 text-center" style="max-width: 1300px; margin: auto">
       <h1 class="d-inline-block mb-2">ICAIMH 2025 REGISTRATION</h1>
-
-      <div class="d-flex justify-content-center">
-        <div class="testimonial3 py-2">
-          <div class="container">
-            <div class="testi3 row justify-content-center">
-              <!-- Initial Number of Participants Selection -->
-              <div class="col my-3" id="participantNumberSelection">
-                <div class="card card-shadow border-0 h-100 pt-3 px-2" style="border-radius: 0.8rem;">
-                  <div class="card-body d-flex flex-column justify-content-evenly">
-                    <h4 class="mb-4">How many people do you want to register?</h4>
-                    <div class="form-group mb-4">
-                      <div class="input-group">
-                        <span class="input-group-text"><i class="fas fa-users"></i></span>
-                        <input type="number" class="form-control" id="numPersonas" min="1" max="10" value="1" />
+      <?php
+      if ($registration_open) {
+      ?>
+        <div class="d-flex justify-content-center">
+          <div class="testimonial3 py-2">
+            <div class="container">
+              <div class="testi3 row justify-content-center">
+                <!-- Initial Number of Participants Selection -->
+                <div class="col my-3" id="participantNumberSelection">
+                  <div class="card card-shadow border-0 h-100 pt-3 px-2" style="border-radius: 0.8rem;">
+                    <div class="card-body d-flex flex-column justify-content-evenly">
+                      <h4 class="mb-4">How many people do you want to register?</h4>
+                      <div class="form-group mb-4">
+                        <div class="input-group">
+                          <span class="input-group-text"><i class="fas fa-users"></i></span>
+                          <input type="number" class="form-control" id="numPersonas" min="1" max="10" value="1" />
+                        </div>
+                        <p class="text-danger mt-2">Please select a number between 1 and 10</p>
+                        <button class="btn btn-orange mt-2" id="continueButton" onclick="showParticipantForms()">
+                          Continue to Registration
+                        </button>
                       </div>
-                      <p class="text-danger mt-2">Please select a number between 1 and 10</p>
-                      <button class="btn btn-orange mt-2" id="continueButton" onclick="showParticipantForms()">
-                        Continue to Registration
-                      </button>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Participant Forms Container -->
-              <div class="col-12 mb-3" id="participantFormsContainer" style="display: none;">
-                <form id="registrationForm" method="POST" action="participantRegistration.php">
-                  <div id="participantForms">
+                <!-- Participant Forms Container -->
+                <div class="col-12 mb-3" id="participantFormsContainer" style="display: none;">
+                  <form id="registrationForm" method="POST" action="participantRegistration.php">
+                    <div id="participantForms">
+                    </div>
+                    <input type="number" id="numPersonasPost" name="numPersonasPost" value="1" hidden />
+                    <div id="errorMessages"></div>
+                    <button type="submit" class="btn btn-success mt-3">Submit Registration</button>
+                  </form>
+                </div>
+
+              </div>
+              <!-- Important Notices Card - More Prominent -->
+              <div style="max-width: 660px; padding: 1rem 0; display: flex; gap: 1rem">
+                <div class="alert alert-danger  mb-0 p-3" style="flex: 1;">
+                  <h5 class="alert-heading "><i class="fas fa-id-card fs-4 me-2"></i>Student ID Requirement</h5>
+                  <p class="mb-0" style="text-align: justify;">Attendees selecting the Student rate will be required to present a valid student ID during the on-site registration process. Failure to do so may result in a fee adjustment to the general public rate.</p>
+                </div>
+
+                <div class="alert alert-warning  mb-0 p-3" style="flex: 1;">
+                  <div>
+                    <h5 class="alert-heading"><i class="fas fa-file-invoice-dollar fs-4 me-3"></i>Factura Fiscal (CFDI)</h5>
+                    <p class="mb-0" style="text-align: justify;">Si requiere factura fiscal mexicana (CFDI), por favor contáctenos por correo electrónico después de haber completado su proceso de registro.</p>
                   </div>
-                  <input type="number" id="numPersonasPost" name="numPersonasPost" value="1" hidden />
-                  <div id="errorMessages"></div>
-                  <button type="submit" class="btn btn-success mt-3">Submit Registration</button>
-                </form>
-              </div>
-
-            </div>
-            <!-- Important Notices Card - More Prominent -->
-            <div style="max-width: 660px; padding: 1rem 0; display: flex; gap: 1rem">
-              <div class="alert alert-danger  mb-0 p-3" style="flex: 1;">
-                <h5 class="alert-heading "><i class="fas fa-id-card fs-4 me-2"></i>Student ID Requirement</h5>
-                <p class="mb-0" style="text-align: justify;">Attendees selecting the Student rate will be required to present a valid student ID during the on-site registration process. Failure to do so may result in a fee adjustment to the general public rate.</p>
-              </div>
-
-              <div class="alert alert-warning  mb-0 p-3" style="flex: 1;">
-                <div>
-                  <h5 class="alert-heading"><i class="fas fa-file-invoice-dollar fs-4 me-3"></i>Factura Fiscal (CFDI)</h5>
-                  <p class="mb-0" style="text-align: justify;">Si requiere factura fiscal mexicana (CFDI), por favor contáctenos por correo electrónico después de haber completado su proceso de registro.</p>
                 </div>
               </div>
+              <!-- </div> -->
             </div>
-            <!-- </div> -->
-          </div>
+          <?php
+        } else {
+          ?>
+            <div class="alert alert-danger mt-3" role="alert">
+              <h4 class="alert-heading">Registration is closed!</h4>
+              <!-- <p>Please check back later.</p> -->
+
+            </div>
+          <?php
+        }
+          ?>
+
+
     </section>
   </main>
   <!-- End #main -->
