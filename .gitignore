@@ -20,4 +20,4 @@ assets/bibtex/refs2024.bib
 SubDom2025/Dockerfile
 SubDom2025/docker-compose.yml
 SubDom2025/eqwewqindex.html
-SubDom2025/src/db/.env
+SubDom2025/.env

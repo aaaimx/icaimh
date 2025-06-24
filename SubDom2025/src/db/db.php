@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/../../vendor/autoload.php'; // Ajusta la ruta según tu estructura
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../../');
 $dotenv->load();
 
 // Accede a las variables de entorno
