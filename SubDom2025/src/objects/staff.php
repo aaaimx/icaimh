@@ -57,6 +57,13 @@ $staff = [
     "br" => null
   ],
   [
+    "first_name" => "Luisa Fernanda",
+    "last_name" => "Román-Hernández",
+    "title" => "Staff",
+    "university" => "Tecnológico Nacional de México/Instituto Tecnológico de Mérida, Mexico.",
+    "br" => null
+  ],
+  [
     "first_name" => "Luis",
     "last_name" => "Cardeña-Ley",
     "title" => "Staff",
