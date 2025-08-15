@@ -1,3 +1,7 @@
+.section-grey {
+    background-color: #f1f1f1;
+}
+
 .max-image {
     width: auto !important;
     max-height: 200px !important;
