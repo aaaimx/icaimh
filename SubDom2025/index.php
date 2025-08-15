@@ -63,7 +63,8 @@
     ?>
 
     <?php
-    include('src/sections/countDownSection.php');
+    #include('src/sections/countDownSection.php');
+    include('src/sections/mediaImpactSection.php');
     ?>
 
     <?php
