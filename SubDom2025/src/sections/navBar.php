@@ -111,7 +111,7 @@
         </li>
 
         <li class="nav-item button-join">
-          <a class="" href="/join">Join Now</a>
+          <a class="" href="http://icaimh.org">ICAIMH website</a>
         </li>
       </ul>
     </div>
