@@ -2,6 +2,7 @@
 <?php
 include("src/objects/modules_day_one.php");
 include("src/objects/modules_day_two.php");
+include("src/objects/modules_day_three.php");
 ?>
 
 <head>
@@ -23,10 +24,13 @@ include("src/objects/modules_day_two.php");
           class="nav-link active"
           href="#day-1"
           role="tab"
-          data-bs-toggle="tab">2-JULY</a><br />
+          data-bs-toggle="tab">1-JULY</a><br />
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#day-2" role="tab" data-bs-toggle="tab">3-JULY</a><br />
+        <a class="nav-link" href="#day-2" role="tab" data-bs-toggle="tab">2-JULY</a><br />
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#day-3" role="tab" data-bs-toggle="tab">3-JULY</a><br />
       </li>
     </ul>
 
@@ -56,6 +60,20 @@ include("src/objects/modules_day_two.php");
       <div role="tabpanel" class="col-lg-7 tab-pane fade" id="day-2">
         <div class="schedule">
           <?php foreach ($modules_day_two as $module) { ?>
+            <div class="time-slot"><?php echo htmlspecialchars($module['time_start']); ?></div>
+            <div class="session <?php echo htmlspecialchars($module['color']); ?>">
+              <h3><?php echo htmlspecialchars($module['session']); ?></h3>
+              <?php if (isset($module['speaker'])) { ?>
+                <span><?php echo htmlspecialchars($module['time_start']); ?> - <?php echo htmlspecialchars($module['time_end']); ?></span>
+                <span><?php echo htmlspecialchars($module['speaker']); ?></span>
+              <?php } ?>
+            </div>
+          <?php } ?>
+        </div>
+      </div>
+      <div role="tabpanel" class="col-lg-7 tab-pane fade" id="day-3">
+        <div class="schedule">
+          <?php foreach ($modules_day_three as $module) { ?>
             <div class="time-slot"><?php echo htmlspecialchars($module['time_start']); ?></div>
             <div class="session <?php echo htmlspecialchars($module['color']); ?>">
               <h3><?php echo htmlspecialchars($module['session']); ?></h3>
