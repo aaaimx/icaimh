@@ -1,0 +1,30 @@
+.button-join {
+  background-color: #198754;
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin-left: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-join:hover {
+  background-color: #146c43;
+}
+
+.card-button-package {
+  all: unset;
+  cursor: pointer;
+}
+
+.card-button-package:hover {
+  all: unset;
+  cursor: pointer;
+}
+
+.btn-orange {
+  background-color: #d16300;
+  color: white;
+}
+.btn-orange:hover {
+  background-color: #e27000;
+  color: white;
+}

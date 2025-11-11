@@ -1,0 +1,80 @@
+:root {
+  --color-coffee: #fff9f0; /*check*/
+  --color-keynote: #73c7e3; /*check*/
+  --color-talk: #24b0ba; /*check*/
+  --color-logistics: #f0f2f2; /*check*/
+  --color-presentation: #cf8a40; /*check*/
+  --color-panel: #2e4a70; /*check*/
+  --color-separator: #d1d1d1;
+  --text-color-dark: #000;
+  --text-color-light: #fff;
+  --shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px;
+  --border-radius: 10px;
+}
+
+.schedule {
+  /* font-family: "Segoe UI", sans-serif; */
+  font-size: 15px;
+  display: grid;
+  grid-template-columns: 2em 1fr;
+  gap: 1em;
+  align-items: start;
+}
+
+.time-slot {
+  font-weight: bold;
+  font-size: 0.8em;
+  color: #444;
+  padding-top: 5px;
+  text-align: right;
+}
+
+.session {
+  padding: 1em;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  font-size: 0.95em;
+  transition: transform 0.2s ease;
+  color: var(--text-color-dark);
+}
+
+.session:hover {
+  transform: translateY(-2px);
+}
+
+.session * {
+  display: block;
+}
+
+.coffee-break {
+  text-align: center;
+
+  background-color: var(--color-coffee);
+}
+
+.keynote {
+  background-color: var(--color-keynote);
+}
+
+.talk {
+  background-color: var(--color-talk);
+}
+
+.logistics {
+  text-align: center;
+  background-color: var(--color-logistics);
+}
+
+.presentations {
+  background-color: var(--color-presentation);
+}
+
+.panel {
+  color: var(--text-color-light);
+  background-color: var(--color-panel);
+}
+
+.separator {
+  background-color: var(--color-separator);
+  text-align: center;
+}
