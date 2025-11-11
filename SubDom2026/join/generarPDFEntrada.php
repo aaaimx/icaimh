@@ -10,9 +10,9 @@ require("../src/vendor/fpdf186/fpdf.php");
 //     $this->SetFont('Arial', 'B', 16);
 //     $this->Cell(30);
 //     $this->Cell(160, 10, 'International Conference on Artificial Intelligence', 0, 1, 'C');
-//     $this->Cell(177, 10, 'for Mental Health 2025', 0, 1, 'R');
+//     $this->Cell(177, 10, 'for Mental Health 2026', 0, 1, 'R');
 //     $this->Cell(30);
-//     $this->Cell(148, 10, 'July 2nd - 3rd, 2025. Merida, Yucatan, Mexico', 0, 1, 'R');
+//     $this->Cell(148, 10, 'July 1st - 3rd, 2026. Merida, Yucatan, Mexico', 0, 1, 'R');
 //     $this->Ln(10);
 //     $this->SetFont('Arial', 'I', 14);
 //     $this->Cell(0, 8, 'Ficha de confirmación de pago', 0, 1, 'L');
@@ -23,7 +23,7 @@ require("../src/vendor/fpdf186/fpdf.php");
 //   {
 //     $this->SetY(-15);
 //     $this->SetFont('Arial', 'I', 8);
-//     $this->Cell(0, 10, 'ICAIMH 2025 - https://2025.icaimh.org/ - Page ' . $this->PageNo(), 0, 0, 'C');
+//     $this->Cell(0, 10, 'ICAIMH 2026 - https://2026.icaimh.org/ - Page ' . $this->PageNo(), 0, 0, 'C');
 //   }
 
 //   function AddStaticInfo($order_id, $participant_id, $participant_name)
@@ -51,9 +51,9 @@ class SimpleVoucherPDF extends FPDF
     // Título principal
     $this->SetFont('Arial', 'B', 16);
     $this->Cell(0, 10, 'International Conference on Artificial Intelligence', 0, 1, 'R');
-    $this->Cell(0, 10, 'for Mental Health 2025', 0, 1, 'R');
+    $this->Cell(0, 10, 'for Mental Health 2026', 0, 1, 'R');
     $this->SetFont('Arial', '', 12);
-    $this->Cell(0, 8, 'July 2nd - 3rd, 2025. Merida, Yucatan, Mexico', 0, 1, 'R');
+    $this->Cell(0, 8, 'July 1st - 3rd, 2026. Merida, Yucatan, Mexico', 0, 1, 'R');
     $this->Ln(8);
 
     // Línea decorativa
@@ -74,7 +74,7 @@ class SimpleVoucherPDF extends FPDF
     $this->SetY(-15);
     $this->SetFont('Arial', 'I', 8);
     $this->SetTextColor(120, 120, 120);
-    $this->Cell(0, 10, 'ICAIMH 2025 - https://2025.icaimh.org/ - Page ' . $this->PageNo(), 0, 0, 'C');
+    $this->Cell(0, 10, 'ICAIMH 2026 - https://2026.icaimh.org/ - Page ' . $this->PageNo(), 0, 0, 'C');
   }
 
   function AddStaticInfo($order_id, $participant_id, $participant_name, $role, $price)
