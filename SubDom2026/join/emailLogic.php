@@ -56,14 +56,14 @@ if ($registration_open) {
 		exit();
 	} else {
 		// Configuración del correo
-		$to = "icaimh2025@icaimh.org";
-		$subject = 'ICAIMH 2025 Registration Invoice';
+		$to = "icaimh2026@icaimh.org";
+		$subject = 'ICAIMH 2026 Registration Invoice';
 
 		// Mensaje HTML con el boton de confirmación
 		$messageAdmin = '
 		<html>
 			<head>
-				<title>ICAIMH 2025 Registration</title>
+				<title>ICAIMH 2026 Registration</title>
 				<style>
 					.button {
 						background-color: #4caf50;
@@ -98,7 +98,7 @@ if ($registration_open) {
 				</style>
 			</head>
 			<body>
-				<p>Please, find attached your registration invoice for ICAIMH 2025.</p>
+				<p>Please, find attached your registration invoice for ICAIMH 2026.</p>
 	
 				<p>
 					Registration will not be confirmed until we receive the bank transfer.
@@ -106,12 +106,12 @@ if ($registration_open) {
 	
 				<p>
 					To ease the confirmation process, please send the transfer references to:
-					<a href="mailto:icaimh2025@icaimh.org">icaimh2025@icaimh.org</a>
+					<a href="mailto:icaimh2026@icaimh.org">icaimh2026@icaimh.org</a>
 				</p>
 	
 				<p>
 					Encuentre adjunto la factura de registro para el congreso
-					<a href="mailto:icaimh2025@icaimh.org">icaimh2025@icaimh.org</a>.
+					<a href="mailto:icaimh2026@icaimh.org">icaimh2026@icaimh.org</a>.
 				</p>
 	
 				<p>
@@ -122,17 +122,17 @@ if ($registration_open) {
 				<p>
 					Para agilizar el proceso de confirmación, le rogamos envíe los datos de la
 					transferencia realizada a:
-					<a href="mailto:icaimh2025@icaimh.org">icaimh2025@icaimh.org</a>
+					<a href="mailto:icaimh2026@icaimh.org">icaimh2026@icaimh.org</a>
 				</p>
 	
 				<a
-					href="https://2025.icaimh.org/join/generarPDF.php?order_id=' . htmlspecialchars($order_id) . '"
+					href="https://2026.icaimh.org/join/generarPDF.php?order_id=' . htmlspecialchars($order_id) . '"
 					target="_blank"
 					class="button"
 					>See Order</a
 				>
 				<a
-					href="https://2025.icaimh.org/join/confirmationPage/?token=' . htmlspecialchars($activation_token) . '&order_id=' . htmlspecialchars($order_id) . '"
+					href="https://2026.icaimh.org/join/confirmationPage/?token=' . htmlspecialchars($activation_token) . '&order_id=' . htmlspecialchars($order_id) . '"
 					target="_blank"
 					class="button"
 					>Confirm Order</a
@@ -146,8 +146,8 @@ if ($registration_open) {
 
 
 		// Cabeceras para correo HTML
-		$headers = "From: icaimh2025@icaimh.org\r\n";
-		// $headers .= "CC: icaimh2025@icaimh.org\r\n";
+		$headers = "From: icaimh2026@icaimh.org\r\n";
+		// $headers .= "CC: icaimh2026@icaimh.org\r\n";
 		$headers .= "MIME-Version: 1.0\r\n";
 		$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
@@ -161,7 +161,7 @@ if ($registration_open) {
 			$messageUser = '
 		<html>
 			<head>
-				<title>ICAIMH 2025 Registration</title>
+				<title>ICAIMH 2026 Registration</title>
 				<style>
 					.button {
 						background-color: #4caf50;
@@ -198,20 +198,20 @@ if ($registration_open) {
 			<body>
 			
 				<p>' . htmlspecialchars($participant['name']) . ',</p>
-				<p>Please, find attached your registration invoice for ICAIMH 2025.</p>
+				<p>Please, find attached your registration invoice for ICAIMH 2026.</p>
 	
 				<p>
 					Registration will not be confirmed until we receive the bank transfer. Transfer details are listed in the attached PDF file.
 				</p>
 	
 				<p>
-					To ease the confirmation process, please send the transfer references to: <a href="mailto:icaimh2025@icaimh.org">icaimh2025@icaimh.org</a>, with the subject "Pago ' . htmlspecialchars($order_id) . '".
+					To ease the confirmation process, please send the transfer references to: <a href="mailto:icaimh2026@icaimh.org">icaimh2026@icaimh.org</a>, with the subject "Pago ' . htmlspecialchars($order_id) . '".
 				</p>
 	
 				<hr>
 	
 				<p>
-					Encuentre adjunto la factura de registro para el congreso ICAIMH 2025.
+					Encuentre adjunto la factura de registro para el congreso ICAIMH 2026.
 				</p>
 	
 				<p>
@@ -219,11 +219,11 @@ if ($registration_open) {
 				</p>
 	
 				<p>
-					Para agilizar el proceso de confirmación, por favor envíe los datos de la transferencia realizada a: <a href="mailto:icaimh2025@icaimh.org">icaimh2025@icaimh.org</a>, con el asunto "Pago ' . htmlspecialchars($order_id) . '"
+					Para agilizar el proceso de confirmación, por favor envíe los datos de la transferencia realizada a: <a href="mailto:icaimh2026@icaimh.org">icaimh2026@icaimh.org</a>, con el asunto "Pago ' . htmlspecialchars($order_id) . '"
 				</p>
 	
 				<a
-					href="https://2025.icaimh.org/join/generarPDF.php?order_id=' . htmlspecialchars($order_id) . '"
+					href="https://2026.icaimh.org/join/generarPDF.php?order_id=' . htmlspecialchars($order_id) . '"
 					target="_blank"
 					class="button"
 					>See Order</a
