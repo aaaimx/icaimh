@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-  <title>ICAIMH 2025</title>
+  <title>ICAIMH 2026</title>
   <meta content="" name="description" />
   <meta content="" name="keywords" />
 
@@ -65,12 +65,12 @@
               <span class="accepted-papers-badge">ACCEPTED PAPERS</span>
               <img src="/public/img/logo/logo_icaimh.png" alt="ICAIMH Logo" class="img-logo" />
             </div>
-            <h1 class="conference-title">ICAIMH 2025: International Conference on Artificial Intelligence for Mental Health 2025</h1>
+            <h1 class="conference-title">ICAIMH 2026: International Conference on Artificial Intelligence for Mental Health 2026</h1>
             <p class="conference-details">
-              <i class="fas fa-calendar-alt me-2"></i>July 2-3, 2025
+              <i class="fas fa-calendar-alt me-2"></i>July 1-3, 2026
               <span class="mx-2">•</span>
               <i class="fas fa-map-marker-alt me-2"></i>Mérida, Yucatán, México<br>
-              <i class="fas fa-globe me-2"></i><a href="/" target="_blank">https://2025.icaimh.org/</a>
+              <i class="fas fa-globe me-2"></i><a href="/" target="_blank">https://2026.icaimh.org/</a>
             </p>
           </div>
         </div>
