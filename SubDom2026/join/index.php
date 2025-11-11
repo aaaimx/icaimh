@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-  <title>ICAIMH 2025</title>
+  <title>ICAIMH 2026</title>
   <meta content="" name="description" />
   <meta content="" name="keywords" />
 
@@ -70,7 +70,7 @@
 
   <main id="main">
     <section id="registration" class="px-2 text-center" style="max-width: 1300px; margin: auto">
-      <h1 class="d-inline-block mb-2">ICAIMH 2025 REGISTRATION</h1>
+      <h1 class="d-inline-block mb-2">ICAIMH 2026 REGISTRATION</h1>
       <?php
       if ($registration_open) {
       ?>

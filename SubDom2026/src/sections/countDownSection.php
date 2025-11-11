@@ -7,7 +7,7 @@
           <h2>Count every day until the launch time</h2>
           <div
             class="countdown d-flex justify-content-center"
-            data-count="2025/07/02">
+            data-count="2026/07/01">
             <div>
               <h3>%d</h3>
               <!--<h3>0</h3>-->

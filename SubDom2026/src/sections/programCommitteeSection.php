@@ -2,9 +2,9 @@
 <section class="p-5 text-center" style="max-width: 1300px; margin: auto" id="pCommittee">
   <h1 class="d-inline-block">PROGRAM COMMITTEE</h1>
   <br />
-  <h5 class="d-inline-block testimonial3">(Tentative)</h5>
-  <div class="d-flex justify-content-center py-3">
-    <div class="container testimonial3 py-5">
+  <!-- <h5 class="d-inline-block testimonial3">(Tentative)</h5> -->
+  <div class="d-flex justify-content-center">
+    <div class="container testimonial3">
       <div class="testi3 row">
         <?php
         include("src/objects/programCommittes.php");

@@ -11,10 +11,10 @@ include("src/objects/sponsors.php")
     <div class="row">
       <div class="col-lg-12">
         <h1 class="mb-3">LOCAL ORGANIZERS</h1>
-        <img
+        <!-- <img
           src="/public/img/anahuac.png"
           class="w-25 img-fluid "
-          alt="..." />
+          alt="..." /> -->
       </div>
     </div>
   </div>

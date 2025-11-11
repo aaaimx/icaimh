@@ -110,9 +110,9 @@
           <a class="nav-link" href="/#contact">Contact</a>
         </li>
 
-        <li class="nav-item button-join">
+        <!-- <li class="nav-item button-join">
           <a class="" href="/join">Join Now</a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>

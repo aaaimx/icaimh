@@ -7,7 +7,7 @@
 
         <p>
           The International Conference on Artificial Intelligence for
-          Mental Health (ICAIMH) 2025 invites submissions that explore the
+          Mental Health (ICAIMH) 2026 invites submissions that explore the
           transformative role of artificial intelligence in mental health.
           ICAIMH brings together researchers, practitioners, and industry
           professionals from AI, psychology, psychiatry, and healthcare to
@@ -85,7 +85,7 @@
         // Iniciar el buffering de salida
         ob_start();
         ?>
-        <p>ICAIMH 2025 welcomes four types of submissions:</p>
+        <p>ICAIMH 2026 welcomes four types of submissions:</p>
 
         <div class="submission-type mb-4">
           <h3 class="h5 fw-bold">Long Papers (8-12 pages)</h3>
@@ -133,7 +133,7 @@
               which will be
               <strong>included in a Special Issue of <em>JAICA</em></strong>, serving as the
               <strong>official conference proceedings</strong> of
-              ICAIMH 2025. Conference abstracts must be written in
+              ICAIMH 2026. Conference abstracts must be written in
               <strong>English</strong>, regardless of the original
               language of the main paper.
             </li>
@@ -201,7 +201,7 @@
           </p>
           <ul>
             <li>
-              ICAIMH 2025 welcomes submissions for
+              ICAIMH 2026 welcomes submissions for
               <strong>oral presentations</strong> of papers that have
               been <strong>published elsewhere</strong> within the
               past year (from <strong>July 2024 onwards</strong>).
@@ -227,7 +227,7 @@
               <strong>All authors of the original paper must provide
                 explicit consent</strong>
               via a signed letter confirming their agreement to have
-              their work presented at ICAIMH 2025.
+              their work presented at ICAIMH 2026.
             </li>
             <li>
               <strong>Conference Abstract Requirement:</strong>
@@ -249,7 +249,7 @@
         ?>
         <p>
           All submissions must be formatted according to the
-          <strong>official ICAIMH 2025 templates</strong>, available
+          <strong>official ICAIMH 2026 templates</strong>, available
           in <strong>Word and LaTeX</strong>. The use of
           <strong>LaTeX is strongly recommended</strong> for ease of
           formatting and compliance with publication standards.
@@ -258,7 +258,7 @@
         <h3 class="h5 mt-4">Formatting Requirements</h3>
         <p>
           Authors must use the appropriate
-          <strong>ICAIMH 2025 template</strong> based on their
+          <strong>ICAIMH 2026 template</strong> based on their
           submission type:
         </p>
 
@@ -408,13 +408,13 @@
             <strong>ICAIMH</strong> has partnered with the
             <strong>Journal of Artificial Intelligence and Computing
               Applications (JAICA)</strong>
-            to handle all <strong>ICAIMH 2025</strong> submissions.
+            to handle all <strong>ICAIMH 2026</strong> submissions.
             Submissions must be made electronically via the JAICA
             submission platform:
             <a
-              href="https://maikron.org/jaica/index.php/ojs/icaimh2025"
+              href="https://maikron.org/jaica/index.php/ojs/icaimh2026"
               class="alert-link"
-              target="_blank">https://maikron.org/jaica/index.php/ojs/icaimh2025</a>
+              target="_blank">https://maikron.org/jaica/index.php/ojs/icaimh2026</a>
           </p>
         </div>
 
@@ -465,19 +465,19 @@
                   <table class="table table-bordered table-striped">
                     <tbody>
                       <tr>
-                        <td>ICAIMH 2025 - Long Papers</td>
+                        <td>ICAIMH 2026 - Long Papers</td>
                       </tr>
                       <tr>
-                        <td>ICAIMH 2025 - Expanded Abstracts</td>
+                        <td>ICAIMH 2026 - Expanded Abstracts</td>
                       </tr>
                       <tr>
                         <td>
-                          ICAIMH 2025 - CPPPs (Critical Position and
+                          ICAIMH 2026 - CPPPs (Critical Position and
                           Perspective Papers)
                         </td>
                       </tr>
                       <tr>
-                        <td>ICAIMH 2025 - Oral Presentations</td>
+                        <td>ICAIMH 2026 - Oral Presentations</td>
                       </tr>
                     </tbody>
                   </table>
@@ -548,7 +548,7 @@
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item">
                         You must submit the source files (LaTeX or
-                        Word) following the ICAIMH 2025 formatting
+                        Word) following the ICAIMH 2026 formatting
                         guidelines.
                       </li>
                       <li class="list-group-item">
@@ -572,7 +572,7 @@
         // Iniciar el buffering de salida
         ob_start();
         ?>
-        <p>To ensure the quality and sustainability of ICAIMH 2025, a publication fee of $1,000 MXN will be required for each accepted submission.</p>
+        <p>To ensure the quality and sustainability of ICAIMH 2026, a publication fee of $1,000 MXN will be required for each accepted submission.</p>
 
         <div class="submission-type mb-4">
           <h3 class="h5 fw-bold">This fee covers:</h3>
@@ -591,7 +591,7 @@
             Payment details and invoicing instructions will be provided to authors upon acceptance of their submission.
           </p>
           <p>
-            For questions regarding payment or billing, please contact us at <a href="mailto:icaimh2025@icaimh.org">icaimh2025@icaimh.org</a>.
+            For questions regarding payment or billing, please contact us at <a href="mailto:icaimh2026@icaimh.org">icaimh2026@icaimh.org</a>.
           </p>
         </div>
         <?php
@@ -607,8 +607,8 @@
             <div class="card h-100 border-primary">
               <div class="card-body text-center">
                 <h3 class="h5">Submission Deadline</h3>
-                <p class="h5 text-primary" style="text-decoration: line-through;">May 2, 2025</p>
-                <p class="h4 text-primary">May 9, 2025</p>
+                <p class="h5 text-primary" style="text-decoration: line-through;">TBD</p>
+                <p class="h4 text-primary">TBD</p>
               </div>
             </div>
           </div>
@@ -616,8 +616,8 @@
             <div class="card h-100 border-primary">
               <div class="card-body text-center">
                 <h3 class="h5">Notification of Acceptance</h3>
-                <p class="h5 text-primary" style="text-decoration: line-through;">May 16, 2025</p>
-                <p class="h4 text-primary">May 23, 2025</p>
+                <p class="h5 text-primary" style="text-decoration: line-through;">TBD</p>
+                <p class="h4 text-primary">TBD</p>
               </div>
             </div>
           </div>
@@ -625,8 +625,8 @@
             <div class="card h-100 border-primary">
               <div class="card-body text-center">
                 <h3 class="h5">Camera-Ready Submission</h3>
-                <p class="h5 text-primary " style="text-decoration-line: line-through;">June 2, 2025</p>
-                <p class="h4 text-primary">June 9, 2025</p>
+                <p class="h5 text-primary " style="text-decoration-line: line-through;">TBD</p>
+                <p class="h4 text-primary">TBD</p>
               </div>
             </div>
           </div>
@@ -641,17 +641,17 @@
         ?>
         <div class="text-center">
           <p>
-            We look forward to your contributions to ICAIMH 2025, where
+            We look forward to your contributions to ICAIMH 2026, where
             research innovations in AI for mental health will continue
             to push the boundaries of interdisciplinary collaboration.
           </p>
           <p>
             For inquiries, please contact
-            <a href="mailto:icaimh2025@icaimh.org">icaimh2025@icaimh.org</a>
+            <a href="mailto:icaimh2026@icaimh.org">icaimh2026@icaimh.org</a>
           </p>
           <div class="alert alert-warning" role="alert">
             <strong>Join us in advancing AI innovations for mental health
-              solutions at ICAIMH 2025!</strong>
+              solutions at ICAIMH 2026!</strong>
           </div>
         </div>
         <?php

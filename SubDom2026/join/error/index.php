@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-  <title>ICAIMH 2025</title>
+  <title>ICAIMH 2026</title>
   <meta content="" name="description" />
   <meta content="" name="keywords" />
 
@@ -139,7 +139,7 @@
   <main id="main">
     <!-- Sección de error -->
     <section id="error" class="px-2 text-center" style="max-width: 800px; margin: auto; position: relative;">
-      <h1 class="mb-4">ICAIMH 2025 REGISTRATION</h1>
+      <h1 class="mb-4">ICAIMH 2026 REGISTRATION</h1>
 
       <div class="error-card animate__animated animate__fadeIn">
         <!-- <div class="error-code">404</div> -->
@@ -168,7 +168,7 @@
         <?php } ?>
       </div>
 
-      <p>If you continue to experience issues, please contact us at <a href="mailto:icaimh2025@icaimh.org">icaimh2025@icaimh.org</a></p>
+      <p>If you continue to experience issues, please contact us at <a href="mailto:icaimh2026@icaimh.org">icaimh2026@icaimh.org</a></p>
     </section>
   </main>
   <!-- End #main -->

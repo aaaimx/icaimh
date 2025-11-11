@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-  <title>ICAIMH 2025</title>
+  <title>ICAIMH 2026</title>
   <meta content="" name="description" />
   <meta content="" name="keywords" />
 
@@ -88,6 +88,7 @@
   ?>
   <main id="main" class="container">
     <div class="my-5 d-flex flex-column gap-4">
+      <h2 class="text-center">TBD</h2>
       <?php foreach ($invited_speakers as $speaker) { ?>
         <div class="card shadow border-0 overflow-hidden">
           <div class="row g-0 d-flex align-items-stretch flex-column flex-lg-row">

@@ -14,7 +14,7 @@
       <div class="row">
         <div class="col-lg-3 col-md-6">
           <div class="footer-info">
-            <h3 style="color: #d16300">ICAIMH 2025</h3>
+            <h3 style="color: #d16300">ICAIMH 2026</h3>
 
             <div class="social-links mt-4">
               <a
@@ -50,6 +50,10 @@
         <div class="col-lg-3 col-md-6 footer-links">
           <h4>Previous Conferences</h4>
           <ul>
+            <li>
+              <i class="bx bx-chevron-right"></i>
+              <a href="https://2025.icaimh.org">https://2025.icaimh.org</a>
+            </li>
             <li>
               <i class="bx bx-chevron-right"></i>
               <a href="https://2024.icaimh.org">https://2024.icaimh.org</a>

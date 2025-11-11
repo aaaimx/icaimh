@@ -4,8 +4,8 @@
   class="p-5 text-center"
   style="max-width: 1300px; margin: auto">
   <h1 class="d-inline-block">PROGRAM CHAIRS</h1>
-  <div class="d-flex justify-content-center py-3">
-    <div class="testimonial3 py-5">
+  <div class="d-flex justify-content-center">
+    <div class="testimonial3">
       <!-- 
         <div class="row justify-content-center">
           <div class="col-md-8 text-center">

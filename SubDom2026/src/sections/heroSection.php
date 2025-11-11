@@ -17,13 +17,13 @@
             <div class="carousel-content">
               <h2 class="animate__animated animate__fadeInDown">
                 <small>International Conference on Artificial Intelligence for
-                  Mental Health 2025</small>
+                  Mental Health 2026</small>
               </h2>
               <h2 class="animate__animated animate__fadeInDown">
                 <small>Mérida, Yucatán, México</small>
               </h2>
               <h2 class="animate__animated animate__fadeInDown">
-                <small>July 2-3, 2025</small>
+                <small>July 1-3, 2026</small>
               </h2>
               <p class="animate__animated animate__fadeInUp">
                 <b style="color: #ffe71e">Welcome to ICAIMH!</b>

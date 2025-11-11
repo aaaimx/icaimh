@@ -30,7 +30,7 @@
           <i class="bi bi-envelope"></i>
           <h3>Email</h3>
           <p>
-            <a href="mailto:icaimh2025@icaimh.org">icaimh2025@icaimh.org</a>
+            <a href="mailto:icaimh2026@icaimh.org">icaimh2026@icaimh.org</a>
           </p>
         </div>
       </div>

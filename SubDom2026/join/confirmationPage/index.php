@@ -55,7 +55,7 @@ if (isset($_GET['token'])) {
           $messageUser = '
             <html>
             <head>
-              <title>ICAIMH 2025 Confirmation</title>
+              <title>ICAIMH 2026 Confirmation</title>
               <style>
                 .button {
                   background-color: #4caf50;
@@ -95,11 +95,11 @@ if (isset($_GET['token'])) {
               <p>' . htmlspecialchars($participant['name']) . ',</p>
               <p>
                 Congratulations! You have successfully completed your registration for
-                ICAIMH 2025.
+                ICAIMH 2026.
               </p>
               <p>
                 Find attached the confirmation document, it is necessary to present it
-                when entering the ICAIMH 2025 conference.
+                when entering the ICAIMH 2026 conference.
               </p>
               <p>
                 <b>Important:</b> All attendees must print and present the PDF file
@@ -124,11 +124,11 @@ if (isset($_GET['token'])) {
               <hr />
 
               <p>
-                ¡Felicidades! Has completado exitosamente tu registro para ICAIMH 2025.
+                ¡Felicidades! Has completado exitosamente tu registro para ICAIMH 2026.
               </p>
               <p>
                 Adjunto encontrarás el documento de confirmación, el cual es necesario
-                presentar al ingresar a la conferencia ICAIMH 2025.
+                presentar al ingresar a la conferencia ICAIMH 2026.
               </p>
               <p>
                 <b>Importante:</b> Todos los asistentes deben imprimir y presentar el
@@ -153,7 +153,7 @@ if (isset($_GET['token'])) {
               </p>
               <p>Si requiere factura fiscal mexicana, por favor envíe un correo electrónico a <a href="mailto:hola@brainhouse.mx" class="text-decoration-none">hola@brainhouse.mx</a> después de completar su registro. Es indispensable adjuntar su Constancia de Situación Fiscal actualizada para poder emitir la factura correctamente.</p>
               <a
-                href="https://2025.icaimh.org/join/generarPDFEntrada.php?order_id=' . htmlspecialchars($order_id) . '"
+                href="https://2026.icaimh.org/join/generarPDFEntrada.php?order_id=' . htmlspecialchars($order_id) . '"
                 target="_blank"
                 class="button">See Confirmation</a>
               <p>Order ID: ' . htmlspecialchars($order_id) . '</p>
@@ -161,9 +161,9 @@ if (isset($_GET['token'])) {
 
             </html>
           ';
-          $subject = 'ICAIMH 2025 Registration Invoice';
+          $subject = 'ICAIMH 2026 Registration Invoice';
           // Cabeceras para correo HTML
-          $headers = "From: icaimh2025@icaimh.org\r\n";
+          $headers = "From: icaimh2026@icaimh.org\r\n";
           $headers .= "MIME-Version: 1.0\r\n";
           $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
           $mailUser = mail($participant['email'], $subject, $messageUser, $headers);
@@ -201,7 +201,7 @@ if (isset($_GET['token'])) {
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-  <title>ICAIMH 2025</title>
+  <title>ICAIMH 2026</title>
   <meta content="" name="description" />
   <meta content="" name="keywords" />
 
@@ -307,7 +307,7 @@ if (isset($_GET['token'])) {
   <main id="main">
     <!-- Sección de registro con confirmación mejorada -->
     <section id="registration" class="px-2 text-center" style="max-width: 800px; margin: auto">
-      <h1 class="mb-2">ICAIMH 2025 REGISTRATION</h1>
+      <h1 class="mb-2">ICAIMH 2026 REGISTRATION</h1>
       <p>Your registration ID: <?php echo htmlspecialchars($order_id, ENT_QUOTES, 'UTF-8'); ?></p>
       <div class="registration-card animate__animated animate__fadeIn">
         <?php
@@ -315,7 +315,7 @@ if (isset($_GET['token'])) {
         ?>
           <i class="bi bi-check-circle-fill confirmation-icon  "></i>
           <h2 class="mb-3">Thank you for registering!</h2>
-          <p class="lead mb-4">Your registration for the International Conference on Artificial Intelligence in Mental Health 2025 has been successfully completed.</p>
+          <p class="lead mb-4">Your registration for the International Conference on Artificial Intelligence in Mental Health 2026 has been successfully completed.</p>
           <div class="next-steps text-start">
             <h4 class="d-flex align-items-center mb-3 ">
               <i class="bi bi-list-task me-2"></i>Next Steps:
@@ -327,7 +327,7 @@ if (isset($_GET['token'])) {
               </li>
               <li class="list-group-item bg-transparent d-flex align-items-start py-2">
                 <i class="bi bi-envelope-check  me-3 mt-1"></i>
-                <span>Complete your payment and send the receipt to <a href="mailto:icaimh2025@icaimh.org" class="text-decoration-none">icaimh2025@icaimh.org</a>.</span>
+                <span>Complete your payment and send the receipt to <a href="mailto:icaimh2026@icaimh.org" class="text-decoration-none">icaimh2026@icaimh.org</a>.</span>
               </li>
               <li class="list-group-item bg-transparent d-flex align-items-start py-2">
                 <i class="bi bi-hourglass-split  me-3 mt-1"></i>
@@ -335,7 +335,7 @@ if (isset($_GET['token'])) {
               </li>
               <li class="list-group-item bg-transparent d-flex align-items-start py-2">
                 <i class="bi bi-calendar-check  me-3 mt-1"></i>
-                <span>Mark July 2-3, 2025 on your calendar</span>
+                <span>Mark July 1-3, 2026 on your calendar</span>
               </li>
               <li class="list-group-item bg-transparent d-flex align-items-start py-2">
                 <i class="bi bi-megaphone  me-3 mt-1"></i>
@@ -372,7 +372,7 @@ if (isset($_GET['token'])) {
         ?>
       </div>
 
-      <p>If you have any questions, please contact us at <a href="mailto:icaimh2025@icaimh.org">icaimh2025@icaimh.org</a></p>
+      <p>If you have any questions, please contact us at <a href="mailto:icaimh2026@icaimh.org">icaimh2026@icaimh.org</a></p>
     </section>
   </main>
   <!-- End #main -->
