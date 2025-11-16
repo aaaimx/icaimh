@@ -1,0 +1,89 @@
+/*--------------------------------------------------------------
+# Sistema Centralizado de Colores
+# Todos los colores del proyecto están definidos aquí como variables CSS
+# Para cambiar la paleta de colores, solo modifica estos valores
+--------------------------------------------------------------*/
+
+:root {
+  /* Colores principales */
+  --color-primary: #002e5f; /* Azul oscuro - Color principal */
+  --color-primary-dark: #001f40; /* Azul más oscuro - Para hover/énfasis */
+  --color-primary-light: #003d7a; /* Azul claro - Para variaciones */
+
+  --color-secondary: #c79316; /* Dorado - Color secundario */
+  --color-secondary-dark: #a67a11; /* Dorado oscuro - Para hover */
+  --color-secondary-light: #e1a71e; /* Dorado claro - Para variaciones */
+
+  /* Colores de texto */
+  --color-text-primary: #444444; /* Texto principal */
+  --color-text-secondary: #505050; /* Texto secundario */
+  --color-text-tertiary: #777777; /* Texto terciario */
+  --color-text-light: #aaaaaa; /* Texto claro */
+  --color-text-dark: #2a2a2a; /* Texto oscuro */
+  --color-text-muted: #848484; /* Texto apagado */
+
+  /* Colores neutros */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-black-transparent: rgba(0, 0, 0, 0.56);
+
+  /* Colores de fondo */
+  --color-bg-light: #f7f7f7;
+  --color-bg-lighter: #f1f1f1;
+  --color-bg-gray: #343a40;
+
+  /* Colores de borde */
+  --color-border-light: #eee;
+  --color-border-medium: #ccc;
+  --color-border-muted: #bababa;
+  --color-border-separator: #d1d1d1;
+
+  /* Colores de estado */
+  --color-success: #c79316; /* Usando secundario para éxito */
+  --color-success-dark: #a67a11;
+  --color-info: #002e5f; /* Usando primario para info */
+  --color-warning: #e1a71e; /* Dorado claro para advertencias */
+  --color-danger: #dc3545; /* Rojo para errores */
+
+  /* Colores para Schedule/Agenda */
+  --color-schedule-coffee: #fff9f0; /* Coffee break */
+  --color-schedule-keynote: #4a9cc7; /* Keynote - Azul medio derivado del primario */
+  --color-schedule-talk: #2e7ba3; /* Talk - Azul medio oscuro */
+  --color-schedule-logistics: #f0f2f2; /* Logistics */
+  --color-schedule-presentation: #c79316; /* Presentation - Color secundario */
+  --color-schedule-panel: #002e5f; /* Panel - Color primario */
+
+  /* Sombras */
+  --shadow-default: rgba(0, 0, 0, 0.1) 0px 4px 10px;
+  --shadow-hover: rgba(0, 46, 95, 0.3) 0px 8px 20px; /* Sombra con color primario */
+
+  /* Opacidades */
+  --opacity-text-white: rgba(255, 255, 255, 0.9);
+  --opacity-bg-dark: rgba(31, 39, 43, 0.75);
+
+  /* Hero Section */
+  --hero-bg-overlay: rgba(17, 17, 17, 0.8); /* Fondo oscuro del hero */
+  --hero-carousel-overlay: rgba(0, 0, 0, 0.5); /* Overlay sobre las imágenes */
+  --hero-control-bg: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Fondo de controles de navegación */
+  --hero-control-bg-hover: rgba(255, 255, 255, 0.3); /* Hover de controles */
+  --hero-control-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Color de íconos de control */
+  --hero-control-color-hover: rgba(255, 255, 255, 0.8); /* Hover de íconos */
+  --hero-indicator-opacity: 0.6; /* Opacidad de indicadores inactivos */
+
+  /* Footer */
+  --footer-bg-primary: #111111; /* Fondo principal del footer */
+  --footer-bg-top: #1d1d1d; /* Fondo del footer-top */
+  --footer-border: #2f2f2f; /* Borde entre secciones */
+  --footer-social-bg: #2a2a2a; /* Fondo de botones sociales */
+  --footer-newsletter-bg-light: #f6f6f6; /* Fondo claro alternativo */
+}
