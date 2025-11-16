@@ -58,9 +58,9 @@ if (isset($_GET['token'])) {
               <title>ICAIMH 2026 Confirmation</title>
               <style>
                 .button {
-                  background-color: #4caf50;
+                  background-color: var(--color-success);
                   border: none;
-                  color: white;
+                  color: var(--color-white);
                   padding: 15px 32px;
                   text-align: center;
                   text-decoration: none;
@@ -73,8 +73,8 @@ if (isset($_GET['token'])) {
 
                 .pdf-button {
                   display: inline-block;
-                  background-color: #106eea;
-                  color: white;
+                  background-color: var(--color-primary);
+                  color: var(--color-white);
                   padding: 12px 25px;
                   border-radius: 5px;
                   text-decoration: none;
@@ -84,9 +84,9 @@ if (isset($_GET['token'])) {
                 }
 
                 .pdf-button:hover {
-                  background-color: #0e5ec7;
+                  background-color: var(--color-primary-dark);
                   transform: translateY(-2px);
-                  box-shadow: 0 4px 10px rgba(16, 110, 234, 0.3);
+                  box-shadow: var(--shadow-hover);
                 }
               </style>
             </head>
@@ -257,9 +257,9 @@ if (isset($_GET['token'])) {
     }
 
     .registration-card {
-      background-color: #f8f9fa;
+      background-color: var(--color-bg-light);
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: var(--shadow-default);
       padding: 10px 30px 30px 30px;
       margin-top: 20px;
       margin-bottom: 30px;
@@ -267,8 +267,8 @@ if (isset($_GET['token'])) {
 
     .pdf-button {
       display: inline-block;
-      background-color: #106eea;
-      color: white;
+      background-color: var(--color-primary);
+      color: var(--color-white);
       padding: 12px 25px;
       border-radius: 5px;
       text-decoration: none;
@@ -278,14 +278,14 @@ if (isset($_GET['token'])) {
     }
 
     .pdf-button:hover {
-      background-color: #0e5ec7;
+      background-color: var(--color-primary-dark);
       transform: translateY(-2px);
-      box-shadow: 0 4px 10px rgba(16, 110, 234, 0.3);
+      box-shadow: var(--shadow-hover);
     }
 
     .confirmation-icon {
       font-size: 60px;
-      color: #28a745;
+      color: var(--color-success);
       margin-bottom: 20px;
     }
 
@@ -294,7 +294,7 @@ if (isset($_GET['token'])) {
       padding: 15px;
       background-color: #e9f6fd;
       border-radius: 8px;
-      border-left: 4px solid #106eea;
+      border-left: 4px solid var(--color-primary);
     }
   </style>
 </head>

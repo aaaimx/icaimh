@@ -1,5 +1,7 @@
+@import url("colors.css");
+
 .button-join {
-  background-color: #198754;
+  background-color: var(--color-success);
   padding: 5px 20px;
   border-radius: 5px;
   margin-left: 5px;
@@ -7,7 +9,7 @@
 }
 
 .button-join:hover {
-  background-color: #146c43;
+  background-color: var(--color-success-dark);
 }
 
 .card-button-package {
@@ -21,10 +23,10 @@
 }
 
 .btn-orange {
-  background-color: #d16300;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }
 .btn-orange:hover {
-  background-color: #e27000;
-  color: white;
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
 }

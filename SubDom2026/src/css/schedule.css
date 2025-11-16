@@ -1,14 +1,6 @@
+@import url("colors.css");
+
 :root {
-  --color-coffee: #fff9f0; /*check*/
-  --color-keynote: #73c7e3; /*check*/
-  --color-talk: #24b0ba; /*check*/
-  --color-logistics: #f0f2f2; /*check*/
-  --color-presentation: #cf8a40; /*check*/
-  --color-panel: #2e4a70; /*check*/
-  --color-separator: #d1d1d1;
-  --text-color-dark: #000;
-  --text-color-light: #fff;
-  --shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px;
   --border-radius: 10px;
 }
 
@@ -24,7 +16,7 @@
 .time-slot {
   font-weight: bold;
   font-size: 0.8em;
-  color: #444;
+  color: var(--color-text-primary);
   padding-top: 5px;
   text-align: right;
 }
@@ -32,10 +24,10 @@
 .session {
   padding: 1em;
   border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-default);
   font-size: 0.95em;
   transition: transform 0.2s ease;
-  color: var(--text-color-dark);
+  color: var(--color-text-dark);
 }
 
 .session:hover {
@@ -49,32 +41,32 @@
 .coffee-break {
   text-align: center;
 
-  background-color: var(--color-coffee);
+  background-color: var(--color-schedule-coffee);
 }
 
 .keynote {
-  background-color: var(--color-keynote);
+  background-color: var(--color-schedule-keynote);
 }
 
 .talk {
-  background-color: var(--color-talk);
+  background-color: var(--color-schedule-talk);
 }
 
 .logistics {
   text-align: center;
-  background-color: var(--color-logistics);
+  background-color: var(--color-schedule-logistics);
 }
 
 .presentations {
-  background-color: var(--color-presentation);
+  background-color: var(--color-schedule-presentation);
 }
 
 .panel {
-  color: var(--text-color-light);
-  background-color: var(--color-panel);
+  color: var(--color-white);
+  background-color: var(--color-schedule-panel);
 }
 
 .separator {
-  background-color: var(--color-separator);
+  background-color: var(--color-border-separator);
   text-align: center;
 }

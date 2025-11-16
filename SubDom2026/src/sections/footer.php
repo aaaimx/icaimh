@@ -1,11 +1,11 @@
 <style>
   .footer-bottom {
-    background-color: #d16300;
+    background-color: var(--color-primary);
     /* o el color que tenga tu página */
     padding: 10px;
     font-size: 14px;
     text-align: center;
-    color: #fff;
+    color: var(--color-white);
   }
 </style>
 <footer id="footer">
@@ -14,7 +14,7 @@
       <div class="row">
         <div class="col-lg-3 col-md-6">
           <div class="footer-info">
-            <h3 style="color: #d16300">ICAIMH 2026</h3>
+            <h3 style="color: var(--color-primary-light)">ICAIMH 2026</h3>
 
             <div class="social-links mt-4">
               <a
@@ -78,8 +78,8 @@
     </div>
   </div>
 
-  <div class="footer-bottom" style="color: #1d1d1d;">
-    Developed by <a style="font-weight: bold; text-decoration: none; color: #1d1d1d;" href="https://www.linkedin.com/in/angel-aldaz/" target="_blank">Ángel Daniel Aldaz-Carrillo</a>
+  <div class="footer-bottom">
+    Developed by <a style="font-weight: bold; text-decoration: none; color: var(--color-white); transition: color 0.3s ease;" href="https://www.linkedin.com/in/angel-aldaz/" target="_blank" onmouseover="this.style.color='var(--color-secondary-light)'" onmouseout="this.style.color='var(--color-white)'">Ángel Daniel Aldaz-Carrillo</a>
   </div>
 
 </footer>

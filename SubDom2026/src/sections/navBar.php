@@ -1,7 +1,7 @@
 <style>
   /* Estilo general del dropdown */
   .navbar .dropdown-menu {
-    background-color: #d16300 !important;
+    background-color: var(--color-primary) !important;
     border: none;
     border-radius: 0;
     margin: 0;
@@ -11,8 +11,8 @@
 
   /* Elementos individuales del menú */
   .navbar .dropdown-menu .dropdown-item {
-    background-color: #d16300;
-    color: white;
+    background-color: var(--color-primary);
+    color: var(--color-white);
     padding: 10px 20px;
     font-weight: 500;
     /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
@@ -25,13 +25,13 @@
 
   /* Hover más visible */
   .navbar .dropdown-menu .dropdown-item:hover {
-    background-color: #a74400;
-    color: black;
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
   }
 
   /* Flecha blanca del toggle */
   .navbar .dropdown-toggle::after:hover {
-    border-top-color: black;
+    border-top-color: var(--color-white);
   }
 </style>
 <nav class="navbar navbar-expand-lg navbar-light py-2">

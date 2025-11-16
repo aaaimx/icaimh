@@ -1,3 +1,5 @@
+@import url("colors.css");
+
 .img-logo {
   max-width: 120px;
   margin-bottom: 15px;
@@ -5,7 +7,7 @@
 
 .table td,
 .table th {
-  background-color: white;
+  background-color: var(--color-white);
 }
 
 html,
@@ -24,20 +26,20 @@ main {
 /* Mejoras sutiles */
 .header-section {
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  border-bottom: 3px solid #d16300;
+  border-bottom: 3px solid var(--color-primary);
   padding: 3rem 0;
 }
 
 .accepted-papers-badge {
-  background: #d16300;
-  color: white;
+  background: var(--color-primary);
+  color: var(--color-white);
   padding: 8px 16px;
   border-radius: 5px;
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.5px;
   margin-bottom: 1rem;
-  box-shadow: 0 2px 8px rgba(209, 99, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 46, 95, 0.2);
 }
 
 .badge-logo-container {
@@ -51,7 +53,7 @@ main {
 }
 
 .conference-title {
-  color: #2c3e50;
+  color: var(--color-text-dark);
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 1.3;
@@ -67,14 +69,14 @@ main {
 }
 
 .conference-details a {
-  color: #d16300;
+  color: var(--color-primary);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .conference-details a:hover {
-  color: #a84d00;
+  color: var(--color-primary-dark);
   text-decoration: underline;
 }
 
@@ -84,7 +86,7 @@ main {
 }
 
 .table-container {
-  background: white;
+  background: var(--color-white);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -104,7 +106,7 @@ main {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   font-size: 0.85rem;
-  border-bottom: 2px solid #d16300;
+  border-bottom: 2px solid var(--color-primary);
   padding: 1rem;
 }
 

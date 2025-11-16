@@ -61,9 +61,9 @@
     }
 
     .error-card {
-      background-color: #f8f9fa;
+      background-color: var(--color-bg-light);
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: var(--shadow-default);
       padding: 30px;
       margin-top: 20px;
       margin-bottom: 30px;
@@ -71,8 +71,8 @@
 
     .return-button {
       display: inline-block;
-      background-color: #106eea;
-      color: white;
+      background-color: var(--color-primary);
+      color: var(--color-white);
       padding: 12px 25px;
       border-radius: 5px;
       text-decoration: none;
@@ -82,21 +82,21 @@
     }
 
     .return-button:hover {
-      background-color: #0e5ec7;
+      background-color: var(--color-primary-dark);
       transform: translateY(-2px);
-      box-shadow: 0 4px 10px rgba(16, 110, 234, 0.3);
+      box-shadow: var(--shadow-hover);
     }
 
     .error-icon {
       font-size: 60px;
-      color: #dc3545;
+      color: var(--color-danger);
       margin-bottom: 20px;
     }
 
     .error-code {
       font-size: 72px;
       font-weight: 700;
-      color: #dc3545;
+      color: var(--color-danger);
       opacity: 0.2;
       position: absolute;
       top: 10px;
@@ -109,12 +109,12 @@
       padding: 15px;
       background-color: #f8d7da;
       border-radius: 8px;
-      border-left: 4px solid #dc3545;
+      border-left: 4px solid var(--color-danger);
       text-align: left;
     }
 
     .error-details {
-      background-color: #f2f2f2;
+      background-color: var(--color-bg-lighter);
       border-radius: 5px;
       padding: 15px;
       margin-top: 20px;

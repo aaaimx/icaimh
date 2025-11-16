@@ -66,9 +66,9 @@ if ($registration_open) {
 				<title>ICAIMH 2026 Registration</title>
 				<style>
 					.button {
-						background-color: #4caf50;
+						background-color: var(--color-success);
 						border: none;
-						color: white;
+						color: var(--color-white);
 						padding: 15px 32px;
 						text-align: center;
 						text-decoration: none;
@@ -80,8 +80,8 @@ if ($registration_open) {
 					}
 					.pdf-button {
 						display: inline-block;
-						background-color: #106eea;
-						color: white;
+						background-color: var(--color-primary);
+						color: var(--color-white);
 						padding: 12px 25px;
 						border-radius: 5px;
 						text-decoration: none;
@@ -91,9 +91,9 @@ if ($registration_open) {
 					}
 	
 					.pdf-button:hover {
-						background-color: #0e5ec7;
+						background-color: var(--color-primary-dark);
 						transform: translateY(-2px);
-						box-shadow: 0 4px 10px rgba(16, 110, 234, 0.3);
+						box-shadow: var(--shadow-hover);
 					}
 				</style>
 			</head>
@@ -164,9 +164,9 @@ if ($registration_open) {
 				<title>ICAIMH 2026 Registration</title>
 				<style>
 					.button {
-						background-color: #4caf50;
+						background-color: var(--color-success);
 						border: none;
-						color: white;
+						color: var(--color-white);
 						padding: 15px 32px;
 						text-align: center;
 						text-decoration: none;
@@ -178,8 +178,8 @@ if ($registration_open) {
 					}
 					.pdf-button {
 						display: inline-block;
-						background-color: #106eea;
-						color: white;
+						background-color: var(--color-primary);
+						color: var(--color-white);
 						padding: 12px 25px;
 						border-radius: 5px;
 						text-decoration: none;
@@ -189,9 +189,9 @@ if ($registration_open) {
 					}
 	
 					.pdf-button:hover {
-						background-color: #0e5ec7;
+						background-color: var(--color-primary-dark);
 						transform: translateY(-2px);
-						box-shadow: 0 4px 10px rgba(16, 110, 234, 0.3);
+						box-shadow: var(--shadow-hover);
 					}
 				</style>
 			</head>

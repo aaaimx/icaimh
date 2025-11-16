@@ -26,7 +26,7 @@
                 <small>July 1-3, 2026</small>
               </h2>
               <p class="animate__animated animate__fadeInUp">
-                <b style="color: #ffe71e">Welcome to ICAIMH!</b>
+                <b style="color: var(--color-secondary)">Welcome to ICAIMH!</b>
               </p>
               <!---<h2 class="animate__animated animate__fadeInUp"><i>(virtual/hybrid)</i></h2>-->
 
