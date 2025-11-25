@@ -80,7 +80,15 @@
         <?php
         renderCfpCard('Focus Areas', ob_get_clean());
         ?>
-
+        <?php
+        // Iniciar el buffering de salida
+        ob_start();
+        ?>
+        <h1>COMING SOON</h1>
+        <?php
+        renderCfpCard('Submission guidelines', ob_get_clean());
+        ?>
+        <!-- 
         <?php
         // Iniciar el buffering de salida
         ob_start();
@@ -596,7 +604,7 @@
         </div>
         <?php
         renderCfpCard('Publication Cost', ob_get_clean());
-        ?>
+        ?> -->
 
         <?php
         // Iniciar el buffering de salida
