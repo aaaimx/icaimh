@@ -15,11 +15,18 @@ $programChairs = [
     "university" => "Universidad Complutense de Madrid.",
     "br" => null
   ],
+  // [
+  //   "first_name" => "Pedro",
+  //   "last_name" => "Ortiz-Sánchez",
+  //   "title" => "Researcher",
+  //   "university" => "Tecnológico Nacional de México/Instituto Tecnológico de Mérida, Mexico.",
+  //   "br" => null
+  // ],
   [
-    "first_name" => "Pedro",
-    "last_name" => "Ortiz-Sánchez",
+    "first_name" => "Stylianos",
+    "last_name" => "Kapetanakis",
     "title" => "Researcher",
-    "university" => "Tecnológico Nacional de México/Instituto Tecnológico de Mérida, Mexico.",
+    "university" => "Middlesex University.",
     "br" => null
   ],
 ];
