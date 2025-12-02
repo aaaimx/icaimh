@@ -34,7 +34,11 @@
       <source src="" type="video/webm" />
     </video>  -->
   </div>
-  <img src="public/img/icaimh/mapa-uady.jpg" class="img-fluid" style="margin-right: auto; margin-left: auto; display: block; margin-bottom: 2rem;" alt="Mapa UADY">
+  <div class="d-flex justify-content-center align-items-center flex-wrap">
+    <img src="public/img/icaimh/mapa-uady.jpg" class="img-fluid mb-4 w-50" alt="Mapa UADY">
+    <img src="public/img/UADY-logo.png" class="img-fluid mb-4 w-50" alt="UADY Logo">
+  </div>
+
 </section>
 
 <!--End Galeria 2022-->
