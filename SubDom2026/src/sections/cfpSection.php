@@ -84,9 +84,76 @@
         // Iniciar el buffering de salida
         ob_start();
         ?>
-        <h1>COMING SOON</h1>
+        <p>ICAIMH 2026 welcomes original research contributions that have not been previously published or submitted for publication elsewhere. We accept two types of submissions:</p>
+
+        <div class="submission-type mb-4">
+          <h3 class="h5 fw-bold">Full Papers (12-15+ pages)</h3>
+          <p>
+            Full research papers presenting original, high-quality contributions with comprehensive experimental validation, theoretical analysis, or systematic reviews. Papers should be approximately 12-15 pages or more, with each page containing around 400 words.
+          </p>
+        </div>
+
+        <div class="submission-type mb-4">
+          <h3 class="h5 fw-bold">Short Papers (6-11 pages)</h3>
+          <p>
+            Short papers presenting preliminary results, novel ideas, work-in-progress research, or significant perspectives. Papers should be approximately 6-11 pages, with each page containing around 400 words.
+          </p>
+        </div>
         <?php
-        renderCfpCard('Submission guidelines', ob_get_clean());
+        renderCfpCard('Types of Submissions', ob_get_clean());
+        ?>
+
+        <?php
+        // Iniciar el buffering de salida
+        ob_start();
+        ?>
+        <p>
+          Detailed formatting requirements and templates will be announced soon. Authors are encouraged to prepare their manuscripts following standard academic conference formatting practices. Specific templates will be provided once the publication venue is confirmed.
+        </p>
+
+        <h3 class="h5 mt-4">Submission Process</h3>
+        <p>
+          All submissions will be made electronically through an online submission platform. Detailed submission instructions and the submission portal link will be announced on the conference website.
+        </p>
+        <?php
+        renderCfpCard('Submission Guidelines', ob_get_clean());
+        ?>
+
+        <?php
+        // Iniciar el buffering de salida
+        ob_start();
+        ?>
+        <p>ICAIMH 2026 follows a double-blind peer review process. Authors must ensure that:</p>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            No author names or identifying information appear in the submitted manuscript
+          </li>
+          <li class="list-group-item">
+            Institutional affiliations are removed from the submission
+          </li>
+          <li class="list-group-item">
+            Self-citations are written in third person (e.g., "Smith et al. [1] demonstrated..." rather than "We demonstrated [1]...")
+          </li>
+          <li class="list-group-item">
+            Acknowledgments are removed or anonymized
+          </li>
+        </ul>
+        <div class="alert alert-warning mt-3" role="alert">
+          <strong>Important:</strong> Submissions that do not comply with the anonymization requirements will be desk-rejected without review.
+        </div>
+        <?php
+        renderCfpCard('Double-Blind Review Process', ob_get_clean());
+        ?>
+
+        <?php
+        // Iniciar el buffering de salida
+        ob_start();
+        ?>
+        <p>
+          All submissions must be written in English. Authors are responsible for ensuring that their manuscripts are written in clear, grammatically correct English. Papers with poor English quality that impedes understanding may be rejected without review.
+        </p>
+        <?php
+        renderCfpCard('Language Requirements', ob_get_clean());
         ?>
         <!-- 
         <?php
@@ -615,8 +682,8 @@
             <div class="card h-100 border-primary">
               <div class="card-body text-center">
                 <h3 class="h5">Submission Deadline</h3>
-                <p class="h5 text-primary" style="text-decoration: line-through;">TBD</p>
-                <p class="h4 text-primary">TBD</p>
+                <p class="h4 text-primary">April 1, 2026</p>
+                <p class="text-muted small">23:59 AoE</p>
               </div>
             </div>
           </div>
@@ -624,8 +691,7 @@
             <div class="card h-100 border-primary">
               <div class="card-body text-center">
                 <h3 class="h5">Notification of Acceptance</h3>
-                <p class="h5 text-primary" style="text-decoration: line-through;">TBD</p>
-                <p class="h4 text-primary">TBD</p>
+                <p class="h4 text-primary">April 21, 2026</p>
               </div>
             </div>
           </div>
@@ -633,11 +699,14 @@
             <div class="card h-100 border-primary">
               <div class="card-body text-center">
                 <h3 class="h5">Camera-Ready Submission</h3>
-                <p class="h5 text-primary " style="text-decoration-line: line-through;">TBD</p>
-                <p class="h4 text-primary">TBD</p>
+                <p class="h4 text-primary">May 6, 2026</p>
               </div>
             </div>
           </div>
+        </div>
+        <div class="alert alert-info mt-3" role="alert">
+          <strong>Conference Dates:</strong> July 1-3, 2026<br>
+          <small>All deadlines are at 23:59 (11:59 PM) Anywhere on Earth (AoE) time zone.</small>
         </div>
         <?php
         renderCfpCard('Important Dates', ob_get_clean());
