@@ -16,11 +16,6 @@ $sponsors = [
     "url" => "https://www.tru.ca/"
   ],
   [
-    "name" => "Asociación Cultural Arca de Noé",
-    "img" => "/public/img/noe.jpg",
-    "url" => "https://arcadenoe.mx/"
-  ],
-  [
     "name" => "Cátedra Extraordinaria BOSCH UCM en Inteligencia Artificial aplicada a Internet de las Cosas",
     "img" => "/public/img/bosch.png",
     "url" => "https://gaia.fdi.ucm.es/research/catedraBosch/"
@@ -96,16 +91,6 @@ $sponsors = [
     "url" => "https://tec.mx/en/ife?srsltid=AfmBOor-mflpVavLp0Xg6XSy42hAOzsKSveWRcSgV-LCK5CkgY5MJAMW"
   ],
   [
-    "name" => "PSYCHSIGN UNAM",
-    "img" => "/public/img/psyUNAN_2.png",
-    "url" => "https://www.facebook.com/profile.php?id=100076071056848&mibextid=ZbWKwL"
-  ],
-  [
-    "name" => "Psicóloga Mariana Sologuren",
-    "img" => "/public/img/psic_mariana_sologuren.jpg",
-    "url" => "https://www.instagram.com/psic.marianasologuren/"
-  ],
-  [
     "name" => "R4C-IRG Interdisciplinary Research Group",
     "img" => "/public/img/r4c.jpeg",
     "url" => "https://tec.mx/en/r4c-irg?srsltid=AfmBOoro0M6EHj4Qj6M7YbZhOdAVdfn8P8Ob-hjpue09b7us5_-7zWHL"
@@ -114,11 +99,6 @@ $sponsors = [
     "name" => "ITM ACM Student Chapter",
     "img" => "/public/img/itm-acm.png",
     "url" => "https://itm-acm.mx"
-  ],
-  [
-    "name" => "Syrene plata/silver",
-    "img" => "/public/img/syrene.png",
-    "url" => "http://syrene.com.mx/"
   ],
   [
     "name" => "Mirrortrec",
