@@ -1,6 +1,11 @@
 <?php
 $sponsors = [
   [
+    "name" => "Springer",
+    "img" => "/public/img/springer-2.svg",
+    "url" => "https://www.springer.com/"
+  ],
+  [
     "name" => "Tecnológico Nacional de México",
     "img" => "/public/img/TECNM.png",
     "url" => "https://www.tecnm.mx/"
