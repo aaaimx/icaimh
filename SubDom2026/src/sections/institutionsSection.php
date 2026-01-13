@@ -19,7 +19,7 @@ include("src/objects/sponsors.php")
     </div>
   </div>
 
-  <div class="container text-center" id="programOrganizers">
+  <!-- <div class="container text-center" id="programOrganizers">
     <h1 class="py-2">PROGRAM ORGANIZERS</h1>
     <div class="row">
       <?php
@@ -28,7 +28,7 @@ include("src/objects/sponsors.php")
       }
       ?>
     </div>
-  </div>
+  </div> -->
 
   <div class="container py-5 text-center" id="sponsors">
     <h1 class="py-2">PARTNERS/SPONSORS</h1>
